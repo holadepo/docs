@@ -112,30 +112,30 @@ To automate code deploys to a single Deployment using [Jenkins](https://www.jenk
 2. At the root of your Git repository, add a [Jenkinsfile](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) that includes the following script, making sure to replace `<deployment-id>` with your own Deployment ID:
 
     <pre><code parentName="pre">{`pipeline {
-      agent any
-        stages {
-          stage('Deploy to Astronomer') {
-           when {
-            expression {
-              return env.GIT_BRANCH == "origin/main"
-            }
-           }
-           steps {
-             script {
-                   sh 'curl https://goreleaserdev.blob.core.windows.net/goreleaser-test-container/releases/${siteVariables.cliVersion}/cloud-cli_${siteVariables.cliVersion}_Linux_x86_64.tar.gz -o astrocloudcli.tar.gz'
-                   sh 'tar xzf astrocloudcli.tar.gz'
-                   sh './astrocloud deploy ${siteVariables.deploymentid} -f'
-             }
-           }
+ agent any
+   stages {
+     stage('Deploy to Astronomer') {
+       when {
+        expression {
+          return env.GIT_BRANCH == "origin/main"
+        }
+       }
+       steps {
+         script {
+           sh 'curl https://goreleaserdev.blob.core.windows.net/goreleaser-test-container/releases/v1.3.1/cloud-cli_1.3.1_Linux_x86_64.tar.gz -o astrocloudcli.tar.gz'
+           sh 'tar xzf astrocloudcli.tar.gz'
+           sh './astrocloud deploy ${DEPLOYMENT_ID} -f'
          }
        }
-     post {
-       always {
-         cleanWs()
-       }
-      }
-    }
-    `}</code></pre>
+     }
+   }
+ post {
+   always {
+     cleanWs()
+   }
+ }
+}
+ `}</code></pre>
 
     This Jenkinsfile triggers a code push to Astro every time a commit or pull request is merged to the `main` branch of your repository.
 
