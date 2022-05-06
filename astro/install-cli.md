@@ -30,9 +30,13 @@ To install and use the Astro CLI on Mac, you must have:
 - [Homebrew](https://brew.sh/)
 - [Docker Desktop](https://docs.docker.com/get-docker/) (v18.09 or higher).
 
-To install and use the Astro CLI on Windows or Linux, you must have:
+To install and use the Astro CLI on Linux, you must have:
 
 - [Docker Engine](https://docs.docker.com/engine/install/) (v0.13.1 or higher).
+
+To install and use the Astro CLI on Windows, you must have:
+
+- [Docker Desktop WSL 2 backend](https://docs.docker.com/desktop/windows/wsl/) (v0.13.1 or higher).
 
 ## Install the Astro CLI
 
@@ -58,7 +62,7 @@ brew install astronomer/cloud/astrocloud
 1. In a PowerShell terminal, create a new directory for your Astro project and set it as your current directory:
 
     ```powershell
-    mkdir my-project && cd my-project
+    mkdir my-project ; cd my-project
     ```
 
 2. Based on your CPU, run one of the following commands to download the Astro CLI executable into your project directory.
@@ -123,6 +127,8 @@ If the installation was successful, you should see the following output:
 
 <pre><code parentName="pre">{`% astrocloud version
 Astro CLI Version: ${siteVariables.cliVersion}`}</code></pre>
+
+>**Note:** If you installed the Astro CLI on Linux or Windows and did not set up the binary as global executable(add it to PATH), run commands with `./astrocloud`
 
 ## Migrate from the `./astro` Executable to the Astro CLI
 
