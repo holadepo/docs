@@ -23,23 +23,25 @@ For more information on managing Google Cloud projects, see [GCP documentation](
 
 To install Astro on GCP, you need:
 
-- A clean [Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) with billing enabled. For security reasons, the install process is not currently supported on a Google Cloud project that has other tooling running in it.
+- A clean [Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects) with billing enabled.
 - A user with [Owner permissions](https://cloud.google.com/iam/docs/understanding-roles) in your project.
 - [Google Cloud Shell](https://cloud.google.com/shell).
 - A minimum [CPU](https://cloud.google.com/compute/quotas#cpu_quota) quota of 36.
 - A minimum [N2_CPU](https://cloud.google.com/compute/quotas#cpu_quota) quota of 24.
 - A subscription to the [Astro Status Page](https://status.astronomer.io). This will ensure that you're alerted in the case of an incident or scheduled maintenance.
 
+Astro requires a clean Google Cloud project account. For security reasons, the install process is not currently supported on a Google Cloud project that has other tooling running in it. For instructions on creating a new Google Cloud project, follow [GCP documentation](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
+
 For more information about the resources required to run Astro on GCP, see [GCP Resource Reference](resource-reference-gcp.md).
 
 ### VPC Peering Prerequisites (Optional)
 
-If any of your GCP resources are on a private network, you can access them using one of the following options:
+If any of your GCP data servicess are on a private network, you can access them using one of the following options:
 
 - [Private Services Connect](https://cloud.google.com/vpc/docs/private-service-connect)
 - A [VPC Peering connection](https://cloud.google.com/vpc/docs/vpc-peering) between Astronomer's VPC and the VPCs for your broader network
 
-Astro uses 4 different CIDR blocks for creating the infrastructure for your Astronomer Cluster.  If you plan on peering with an existing VPC and want to use custom values for your CIDRs, then you must additionally provide your own CIDR ranges (RFC 1918 IP Space) of `/19` or better for the following services:
+Astro uses 4 different CIDR blocks for creating the infrastructure for your Astro Cluster.  If you plan on peering with an existing VPC and want to use custom values for your CIDRs, then you must additionally provide your own CIDR ranges (RFC 1918 IP Space) of `/19` or better for the following services:
 
 - **Subnet CIDR**: Used by nodes in your GKE cluster (Default: `172.20.0.0/19`)
 - **Pod CIDR**: Used by GKE pods (Default: `172.21.0.0/19`)
@@ -68,7 +70,7 @@ After completing your initial installation, we recommend [setting up an identity
 
 The Data Plane is a collection of infrastructure components for Astro that run in your cloud and are fully managed by Astronomer. This includes a central database, storage for Airflow tasks logs, and the resources required for task execution.
 
-To activate the Data Plane on your GCP project:
+To activate the Data Plane on your Google Cloud project:
 
 1. Run the following commands in your Google Cloud Shell:
 
@@ -107,17 +109,7 @@ Once you've activated your Data Plane, provide Astronomer with:
 - Your preferred maximum node count.
 - (_Optional_) Your custom CIDR ranges for connecting to Astronomer's services.
 
-If not specified, Astronomer will create a Cluster with the following resources in `us-central1`:
-
-- `e2-medium-4` nodes.
-- A Medium General Purpose CloudSQL instance (4vCPU, 16GB).
-- A maximum node count of 20.
-- A Subnet CIDR of `172.20.0.0/19`.
-- A Pod CIDR of `172.21.0.0/19`.
-- A Service Address CIDR of `172.22.0.0/19`.
-- A VPC Peering CIDR of `172.23.0.0/9`.
-
-For information on all supported regions and configurations, see [GCP Resource Reference](resource-reference-gcp.md).  
+If not specified, Astronomer will create a Cluster with `e2-medium-4` nodes and a medium General Purpose CloudSQL instance (4vCPU, 16GB memory) in `us-central1`. For a list of all defaults and supported configurations, see [GCP Resource Reference](resource-reference-gcp.md).
 
 :::info
 
