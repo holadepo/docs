@@ -196,7 +196,10 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        sitemap: false,
+        sitemap: {
+          changefreq: 'daily',
+          priority: 0.7,
+        },
       },
     ],
   ],
@@ -219,14 +222,6 @@ module.exports = {
           banner: 'none',
          },
        },
-      },
-    ],
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        id: 'default',
-        changefreq: 'daily',
-        priority: 0.7,
       },
     ],
     [
