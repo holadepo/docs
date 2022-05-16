@@ -35,10 +35,6 @@ module.exports = {
     colorMode: {
       disableSwitch: false,
     },
-    sitemap: {
-      changefreq: 'daily',
-      priority: 0.7,
-    },
     navbar: {
       title: 'Docs',
       logo: {
@@ -200,6 +196,7 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: false,
       },
     ],
   ],
@@ -222,6 +219,22 @@ module.exports = {
           banner: 'none',
          },
        },
+      },
+    ],
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        id: 'default',
+        changefreq: 'daily',
+        priority: 0.7,
+      },
+    ],
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        id: 'software',
+        changefreq: 'daily',
+        priority: 0.3,
       },
     ],
   ],
