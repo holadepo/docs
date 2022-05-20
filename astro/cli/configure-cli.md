@@ -162,3 +162,56 @@ brew uninstall astronomer/cloud/astro
 </TabItem>
 
 </Tabs>
+
+## Migrate from `astrocloud` to `astro`
+
+Complete this migration if all of the following are true:
+
+- You are an Astro user.
+- You used a pre-1.0 version of the Astro CLI. For these versions, the CLI executable was `astrocloud`.
+
+### Step 1: Uninstall the `astrocloud` Executable
+
+<Tabs
+    defaultValue="mac"
+    values={[
+        {label: 'Mac', value: 'mac'},
+        {label: 'Windows', value: 'windows'},
+        {label: 'Linux', value: 'linux'},
+    ]}>
+<TabItem value="mac">
+
+To uninstall the old Astro CLI, run the following command:
+
+```sh
+brew uninstall astronomer/cloud/astrocloud
+```
+
+</TabItem>
+
+<TabItem value="windows">
+
+[Uninstall steps for Windows]
+
+</TabItem>
+
+<TabItem value="linux">
+
+[Uninstall steps for Linux]
+
+</TabItem>
+
+</Tabs>
+
+## Step 2: Install Astro CLI v1.0+
+
+For more details, see [Install the CLI](configure-cli.md#install-the-cli.md).
+
+## Step 3: Migrate Project Configurations (_Optional_)
+
+For each Astro project where you manually updated the `.astrocloud/config.yaml` file:
+
+1. In your terminal, open your Astro project.
+2. Run `astro dev init` to generate a new `.astro` directory in your project. This subdirectory might be hidden in graphical file browsers. You can show hidden files using `⌘ + Shift + .` on Mac or by selecting **View > Hidden items** in Windows file explorer.
+3. Copy the contents from `.astrocloud/config.yaml` into `.astro/config.yaml`.
+4. Delete `.astrocloud/config.yaml`.
