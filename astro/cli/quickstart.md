@@ -11,7 +11,7 @@ import {siteVariables} from '@site/src/versions';
 
 ## Overview
 
-The Astro CLI is the easiest way to run Apache Airflow on your machine. By the end of this quickstart, you'll be able to run an Airflow project on your local machine with just a few commands. 
+The Astro CLI is the easiest way to run Apache Airflow on your machine. By the end of this quickstart, you'll be able to run an Airflow project on your local machine with just a few commands.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ To use the Astro CLI on Windows or Linux, you must have:
 Install the Astro CLI by running the following command:
 
 ```sh
-brew install astronomer/cloud/astro
+brew install astronomer/tap/astro
 ```
 
 </TabItem>
