@@ -212,5 +212,8 @@ For each Astro project where you manually updated the `.astrocloud/config.yaml` 
 
 1. In your terminal, open your Astro project.
 2. Run `astro dev init` to generate a new `.astro` directory in your project. This subdirectory might be hidden in graphical file browsers. You can show hidden files using `⌘ + Shift + .` on Mac or by selecting **View > Hidden items** in Windows file explorer.
+
+    If the CLI prompts you about whether you want to create a project in a non-empty directory, enter `Yes`. The CLI will only create files that aren't yet in your directory. In this case, the only file that it will create is `.astro/config.yaml`.
+
 3. Copy the contents from `.astrocloud/config.yaml` into `.astro/config.yaml`.
 4. Delete `.astrocloud/config.yaml`.
