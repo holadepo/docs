@@ -14,6 +14,5 @@ For more information on accessing the Airflow Database, see [Access the Airflow 
 :::caution
 
   This is a caution. Make sure you're using Astro CLI Version: ${siteVariables.cliVersion}`}.
-.
 
   :::
