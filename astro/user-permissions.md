@@ -53,7 +53,7 @@ A Workspace role grants a user some level of access to a specific Workspace. The
 | View DAGs in the Airflow UI             | ✔️                   | ✔️                   | ✔️                  |
 | Push code to Deployments                |                      | ✔️                   | ✔️                  |
 | Update Deployment configurations              |                      | ✔️                   | ✔️                  |
-| Update user roles and information       |                      |                      | ✔️                  |
+| Update user roles and permissions       |                      |                      | ✔️                  |
 | Read Airflow Connections and Variables  |                      |                      | ✔️                  |
 | Write Airflow Connections and Variables |                      |                      | ✔️                  |
 
