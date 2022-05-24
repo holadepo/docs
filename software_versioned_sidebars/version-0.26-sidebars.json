@@ -16,6 +16,10 @@
           "type": "doc",
           "id": "version-0.26/faq"
         }
+        {
+          "type": "doc",
+          "id": "version-0.26/docusaurus-scavenger-hunt"
+        }
       ],
       "collapsible": true,
       "collapsed": true
