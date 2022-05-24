@@ -13,6 +13,8 @@ For more information on accessing the Airflow Database, see [Access the Airflow 
 
 :::caution
 
-  This is a caution. Make sure you're using Astro CLI Version: ${siteVariables.cliVersion}.
+  This is a caution. 
+  
+<pre><code parentName="pre">{`% Make sure you're using Astro CLI version ${siteVariables.cliVersion}`}</code></pre>
 
-  :::
+:::
