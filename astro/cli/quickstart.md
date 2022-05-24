@@ -45,57 +45,27 @@ brew install astronomer/tap/astro
 
 <TabItem value="windows">
 
-1. In a PowerShell terminal, create a new directory for your Astro project and set it as your current directory:
+1. Go to the [**Releases** page of the Astro CLI GitHub](https://github.com/astro-projects/astro-cli/releases). Based on your desired CLI version and CPU architecture, download one of the `.zip` files available on this page.
 
-    ```powershell
-    mkdir my-project && cd my-project
-    ```
+    For example, if you wanted to install v1.0.0 of the Astro CLI on a Windows Machine with an AMD 64 architecture, you would download `astro_1.0.0-converged_windows_amd64.zip`.
 
-2. Based on your CPU, run one of the following commands to download the Astro CLI executable into your project directory.
-
-    - AMD64:
-
-        <pre><code parentName="pre">{`Invoke-WebRequest -Uri https://goreleaserdev.blob.core.windows.net/goreleaser-test-container/releases/v${siteVariables.cliVersion}/cloud-cli_${siteVariables.cliVersion}_Windows_x86_64.tar.gz -o astrocli.tar.gz`}</code></pre>
-
-    - ARM64:
-
-        <pre><code parentName="pre">{`Invoke-WebRequest -Uri https://goreleaserdev.blob.core.windows.net/goreleaser-test-container/releases/v${siteVariables.cliVersion}/cloud-cli_${siteVariables.cliVersion}_Windows_arm64.tar.gz -OutFile astrocli.tar.gz`}</code></pre>
-
-3. Run the following command to unzip the executable:
+2. Run the following command to unzip the executable:
 
     ```sh
     tar -xvzf .\astrocli.tar.gz
     ```
 
-4. To run the executable without specifying its file path, save `astro.exe` in a secure location on your machine and add its filepath in the Windows PATH environment variable. For more information about configuring the PATH environment variable, read [Java documentation](https://www.java.com/en/download/help/path.html).
+3. Save `astro.exe` in a secure location on your machine and add its filepath in the Windows PATH environment variable. For more information about configuring the PATH environment variable, read [Java documentation](https://www.java.com/en/download/help/path.html).
 
 </TabItem>
 
 <TabItem value="linux">
 
-1. In a Linux terminal, create a new directory for your Astro project and set it as your current directory:
+Run the following command to install the latest version of the Astro CLI directly to `PATH`:
 
-    ```sh
-    mkdir my-project && cd my-project
-    ```
-
-2. Based on your CPU, run one of the following commands to download the Astro CLI executable into your project directory.
-
-    - AMD64:
-
-        <pre><code parentName="pre">{`curl https://goreleaserdev.blob.core.windows.net/goreleaser-test-container/releases/v${siteVariables.cliVersion}/cloud-cli_${siteVariables.cliVersion}_Linux_x86_64.tar.gz -o astrocli.tar.gz`}</code></pre>
-
-    - ARM64:
-
-        <pre><code parentName="pre">{`curl https://goreleaserdev.blob.core.windows.net/goreleaser-test-container/releases/v${siteVariables.cliVersion}/cloud-cli_${siteVariables.cliVersion}_Linux_arm64.tar.gz -o astrocli.tar.gz`}</code></pre>
-
-3. Run the following command to unzip the executable:
-
-    ```sh
-    tar xzf astrocli.tar.gz
-    ```
-
-4. To run the executable without specifying its file path, save `astro` in a secure location on your machine and add its filepath in the Linux `$PATH` environment variable. For more information about configuring the PATH environment variable, read [Java documentation](https://www.java.com/en/download/help/path.html).
+```sh
+curl -sSL install.astronomer.io | sudo bash -s
+```
 
 </TabItem>
 
@@ -156,12 +126,6 @@ This command builds your project and spins up 3 Docker containers on your machin
 ## Step 5: Access the Airflow UI
 
 Once your project builds successfully, you can access the Airflow UI by going to `http://localhost:8080/` and logging in with `admin` for both your username and password.
-
-:::info
-
-It might take a few minutes for the Airflow UI to be available. As you wait for the Webserver container to start up, you might need to refresh your browser.
-
-:::
 
 After logging in, you should see the DAGs from your `dags` directory in the Airflow UI.
 
