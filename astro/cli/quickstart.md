@@ -13,17 +13,6 @@ import {siteVariables} from '@site/src/versions';
 
 The Astro CLI is the easiest way to run Apache Airflow on your machine. By the end of this quickstart, you'll be able to run an Airflow project on your local machine with just a few commands.
 
-## Prerequisites
-
-To use the Astro CLI on Mac, you must have:
-
-- [Homebrew](https://brew.sh/)
-- [Docker Desktop](https://docs.docker.com/get-docker/) (v18.09 or higher).
-
-To use the Astro CLI on Windows or Linux, you must have:
-
-- [Docker Engine](https://docs.docker.com/engine/install/) (v0.13.1 or higher).
-
 ## Step 1: Install the Astro CLI
 
 <Tabs
@@ -45,6 +34,18 @@ brew install astronomer/tap/astro
 
 <TabItem value="windows">
 
+#### Prerequisites
+
+To use the Astro CLI on Windows, you must have:
+
+- [Docker Desktop](https://docs.docker.com/desktop/windows/install/) for windows.
+- [Docker Engine](https://docs.docker.com/engine/install/) (v0.13.1 or higher).
+- [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) enabled on your local machine.
+-  Windows 10 or Windows 11.
+
+#### Installation
+
+
 1. Go to the [**Releases** page of the Astro CLI GitHub](https://github.com/astro-projects/astro-cli/releases). Based on your desired CLI version and CPU architecture, download one of the `.zip` files available on this page.
 
     For example, if you wanted to install v1.0.0 of the Astro CLI on a Windows Machine with an AMD 64 architecture, you would download `astro_1.0.0-converged_windows_amd64.zip`.
@@ -60,6 +61,14 @@ brew install astronomer/tap/astro
 </TabItem>
 
 <TabItem value="linux">
+
+#### Prerequisites
+
+To use the Astro CLI on Linux, you must have:
+
+- [Docker Engine](https://docs.docker.com/engine/install/) (v0.13.1 or higher).
+
+#### Installation
 
 Run the following command to install the latest version of the Astro CLI directly to `PATH`:
 

@@ -20,6 +20,12 @@ import {siteVariables} from '@site/src/versions';
     ]}>
 <TabItem value="mac">
 
+#### Prerequisites
+
+To use the Astro CLI on Mac, you must have:
+
+- [Homebrew](https://brew.sh/)
+- [Docker Desktop](https://docs.docker.com/get-docker/) (v18.09 or higher).
 
 To install the latest version of the Astro CLI, run the following command:
 
@@ -46,7 +52,7 @@ To use the Astro CLI on Windows, you must have:
 - [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) enabled on your local machine.
 -  Windows 10 or Windows 11.
 
-#### Setup
+#### Installation
 
 
 1. Go to the [**Releases** page of the Astro CLI GitHub](https://github.com/astro-projects/astro-cli/releases). Based on your desired CLI version and CPU architecture, download one of the `.zip` files available on this page.
@@ -71,7 +77,7 @@ To use the Astro CLI on Linux, you must have:
 
 - [Docker Engine](https://docs.docker.com/engine/install/) (v0.13.1 or higher).
 
-#### Setup
+#### Installation
 
 Run the following command to install the latest version of the Astro CLI directly to `PATH`:
 
