@@ -20,6 +20,7 @@ import {siteVariables} from '@site/src/versions';
     ]}>
 <TabItem value="mac">
 
+
 To install the latest version of the Astro CLI, run the following command:
 
 ```sh
@@ -36,6 +37,18 @@ brew install astronomer/tap/astro@0.XX
 
 <TabItem value="windows">
 
+#### Prerequisites
+
+To use the Astro CLI on Windows, you must have:
+
+- [Docker Desktop](https://docs.docker.com/desktop/windows/install/) for windows.
+- [Docker Engine](https://docs.docker.com/engine/install/) (v0.13.1 or higher).
+- [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) enabled on your local machine.
+-  Windows 10 or Windows 11.
+
+#### Setup
+
+
 1. Go to the [**Releases** page of the Astro CLI GitHub](https://github.com/astro-projects/astro-cli/releases). Based on your desired CLI version and CPU architecture, download one of the `.zip` files available on this page.
 
     For example, if you wanted to install v1.0.0 of the Astro CLI on a Windows Machine with an AMD 64 architecture, you would download `astro_1.0.0-converged_windows_amd64.zip`.
@@ -51,6 +64,14 @@ brew install astronomer/tap/astro@0.XX
 </TabItem>
 
 <TabItem value="linux">
+
+#### Prerequisites
+
+To use the Astro CLI on Linux, you must have:
+
+- [Docker Engine](https://docs.docker.com/engine/install/) (v0.13.1 or higher).
+
+#### Setup
 
 Run the following command to install the latest version of the Astro CLI directly to `PATH`:
 
