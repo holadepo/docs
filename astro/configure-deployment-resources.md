@@ -7,7 +7,7 @@ description: Learn how to create and configure Astro Deployment Resources.
 
 ## Overview
 
-After you create an Astro Deployment, you can modify the resource settings to make sure that enough resources are allocated to complete tasks successfully.
+After you create an Astro Deployment, you can modify its resource settings to make sure that enough resources are allocated to complete tasks successfully.
 
 ## Edit Deployment Resource Settings
 
