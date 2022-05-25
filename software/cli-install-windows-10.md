@@ -5,21 +5,36 @@ id: cli-install-windows-10
 description: Install the Windows-based CLI or the Unix-based CLI a Windows Subsystem for Linux (WSL).
 ---
 
+<<<<<<< HEAD
 If you're a Windows user and want to install and use the Astronomer CLI, you have the following options:
 
 - Install the Unix-based CLI on Windows Subsystem for Linux (WSL)
 - Install the Windows-based CLI
+=======
+To install the Astronomer CLI on Windows, you have the following options:
+
+- Install the Unix-based CLI on Windows Subsystem for Linux (WSL).
+- Install the Windows-based CLI.
+>>>>>>> 3b5d907978608cb19ae8c433c2cc933e7570e432
 
 > **Note:** Both options require Windows 10 or later.
 
 ## Astronomer CLI on Windows Subsystem for Linux
 
+<<<<<<< HEAD
 Before you start the setup and configuration process for the Astronomer CLI on the WSL  make sure:
+=======
+Before you start the setup and configuration process for the Astronomer CLI on the WSL, make sure:
+>>>>>>> 3b5d907978608cb19ae8c433c2cc933e7570e432
  - You're running the bash terminal
  - You have [WSL enabled](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
  - You're running Windows 10 version 2004 or later (Build 19041 or later) or Windows 11
 
+<<<<<<< HEAD
 **Note:** Astronomer recommends using Ubuntu.
+=======
+**Note:** Astronomer recommends using Ubuntu as your linux distribution for WSL.
+>>>>>>> 3b5d907978608cb19ae8c433c2cc933e7570e432
 
 The complete WSL installation guide is available here: [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
@@ -39,7 +54,11 @@ Finish the installation and start the deployment DAGs. See [CLI Quickstart Guide
 
 Use the following instructions to install a Windows adapted version of the Astronomer CLI.
 
+<<<<<<< HEAD
 ### Step 1. Prerequisite Confirmation
+=======
+### Prerequisites
+>>>>>>> 3b5d907978608cb19ae8c433c2cc933e7570e432
 
 Make sure you have the following installed:
 
@@ -54,9 +73,14 @@ If you have any issues with Docker, see [Docker's Troubleshooting Guide for Wind
 
 ### Step 3. Download the Astronomer CLI
 
+<<<<<<< HEAD
 Currently, Astronomer on Windows outside of WSL is only supported by Astronomer CLI versions 0.28 and later.
 
 You can download the latest version of the CLI [here](https://github.com/astronomer/astro-cli/releases/). Select an asset that includes windows_386.zip in the filepath.
+=======
+
+You can download the latest version of the CLI on the [Astronomer GitHub](https://github.com/astronomer/astro-cli/releases/). Select an asset that includes windows_386.zip in the filepath.
+>>>>>>> 3b5d907978608cb19ae8c433c2cc933e7570e432
 
 ### Step 4. Extract the contents
 
