@@ -51,6 +51,9 @@ A Workspace role grants a user some level of access to a specific Workspace. The
 | View Workspace users                    | ✔️                   | ✔️                   | ✔️                  |
 | View all Deployments in the Cloud UI    | ✔️                   | ✔️                   | ✔️                  |
 | View DAGs in the Airflow UI             | ✔️                   | ✔️                   | ✔️                  |
+| View Airflow task logs                  | ✔️                   | ✔️                   | ✔️                  |
+| Edit task instance and DAG state        |                      | ✔️                   | ✔️                  |  
+| Invite users to Workspace               |                      |                      | ✔️                   |
 | Push code to Deployments                |                      | ✔️                   | ✔️                  |
 | Update Deployment configurations              |                      | ✔️                   | ✔️                  |
 | Update user roles and permissions       |                      |                      | ✔️                  |
