@@ -50,34 +50,68 @@ Install the Astro CLI by running the following command:
 ```sh
 brew install astronomer/cloud/astrocloud
 ```
+## Confirm the Installation
+
+To confirm the CLI was installed properly, run the following CLI command:
+
+```
+astrocloud version
+```
+
+If the installation was successful, you should see the following output:
+
+<pre><code parentName="pre">{`% astrocloud version
+Astro CLI Version: ${siteVariables.cliVersion}`}</code></pre>
 
 </TabItem>
 
 <TabItem value="windows">
 
-1. In a PowerShell terminal, create a new directory for your Astro project and set it as your current directory:
+1. Based on your CPU, run one of the following commands to download the Astro CLI executable into your project directory.
 
-    ```powershell
-    mkdir my-project && cd my-project
-    ```
-
-2. Based on your CPU, run one of the following commands to download the Astro CLI executable into your project directory.
-
-    - AMD64:
+    - AMD64/Intel:
 
         <pre><code parentName="pre">{`Invoke-WebRequest -Uri https://goreleaserdev.blob.core.windows.net/goreleaser-test-container/releases/v${siteVariables.cliVersion}/cloud-cli_${siteVariables.cliVersion}_Windows_x86_64.tar.gz -o astrocloudcli.tar.gz`}</code></pre>
 
-    - ARM64:
+    - ARM64/Apple Silicon:
 
         <pre><code parentName="pre">{`Invoke-WebRequest -Uri https://goreleaserdev.blob.core.windows.net/goreleaser-test-container/releases/v${siteVariables.cliVersion}/cloud-cli_${siteVariables.cliVersion}_Windows_arm64.tar.gz -OutFile astrocloudcli.tar.gz`}</code></pre>
 
-3. Run the following command to unzip the executable:
+2. Run the following command to unzip the executable:
 
     ```sh
     tar -xvzf .\astrocloudcli.tar.gz
     ```
+3. Add the directory containing `astrocloud.exe` as a PATH environment variable and then restart your computer.  For example, if `astrocloud.exe` is located here C:\Users\yourname\astrocloud.exe, the PATH environment variable is C:\Users\yourname. To add a PATH environment variable, see [Java documentation](https://www.java.com/en/download/help/path.html).
 
-4. To run the executable without specifying its file path, save `astrocloud.exe` in a secure location on your machine and add its filepath in the Windows PATH environment variable. For more information about configuring the PATH environment variable, read [Java documentation](https://www.java.com/en/download/help/path.html).
+4. To confirm the CLI was installed properly, run the following CLI command:
+
+    ```
+    astrocloud version
+    ```
+    If the installation was successful, you should see the following output:
+
+    <pre><code parentName="pre">{`% astrocloud version
+    Astro CLI Version: ${siteVariables.cliVersion}`}</code></pre>
+
+## Confirm the Installation
+
+1. Open a PowerShell terminal and run this command to create a new directory for your Astro project and set it as your current directory:
+
+    ```powershell
+    mkdir my-project; cd my-project
+    ```
+2. Run the following command to initialize the Astro project in the directory:
+
+    ```sh
+    astrocloud dev init
+    ```
+
+3. Run the following command to start your local Airflow instance:
+
+    ```sh
+    astrocloud dev start
+    ```
 
 </TabItem>
 
@@ -107,11 +141,7 @@ brew install astronomer/cloud/astrocloud
 
 4. To run the executable without specifying its file path, save `astrocloud` in a secure location on your machine and add its filepath in the Linux `$PATH` environment variable. For more information about configuring the PATH environment variable, read [Java documentation](https://www.java.com/en/download/help/path.html).
 
-</TabItem>
-
-</Tabs>
-
-## Confirm the Install
+## Confirm the Installation
 
 To confirm the CLI was installed properly, run the following CLI command:
 
@@ -123,6 +153,10 @@ If the installation was successful, you should see the following output:
 
 <pre><code parentName="pre">{`% astrocloud version
 Astro CLI Version: ${siteVariables.cliVersion}`}</code></pre>
+
+</TabItem>
+
+</Tabs>
 
 ## Migrate from the `./astro` Executable to the Astro CLI
 
