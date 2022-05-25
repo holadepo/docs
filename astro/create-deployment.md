@@ -26,17 +26,13 @@ If you prefer, you can run the `astrocloud deployment create` command in the Ast
     - **Astro Runtime**: Select the Astro Runtime version. The latest version of Astro Runtime is selected by default.
     - **Description**: Optional. Enter a description for your Deployment. 
     - **Cluster**: Select the Astro Cluster in which you want to create this Deployment.
-
-4. Click **Create Deployment** and within a short period the following screen appears:
+4. Optional. Edit the Deployment resource settings. See [Configure Deployment Resources](configure-deployment-resources.md). 
+5. Click **Create Deployment** and within a short period the following screen appears:
 
     ![Cloud UI Deployment Configuration](/img/docs/deployment-configuration.png)
 
     The initial status of all new Deployments is `UNHEALTHY`. This indicates that the Deployment's Webserver and Scheduler are still spinning up in your cloud. In a few minutes the status changes to `HEALTHY` and you can move to step 5.
 
-5. Optional. Edit the Deployment resource settings:
-    - Click **Edit Configuration**.
-    - Edit the Deployment resource settings.
-    - Click **Update Deployment**.
 6. Optional. Click **Open Airflow** to access the Airflow UI.
 
 ## Step 3: Set Deployment Resources

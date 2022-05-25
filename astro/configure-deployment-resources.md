@@ -2,7 +2,7 @@
 sidebar_label: 'Configure Deployment Resources'
 title: 'Configure Deployment Resources'
 id: configure-deployment-resources
-description: Learn how to create and configure Astro Deployment Resources.
+description: Learn how to create and configure Astro Deployment resources.
 ---
 
 ## Overview
@@ -14,7 +14,7 @@ After you create an Astro Deployment, you can modify its resource settings to ma
 1. Log in to the [Cloud UI](https://cloud.astronomer.io) and select a Workspace.
 2. Select a Deployment.
 3. Click **Edit Configuration**.
-4. Edit the Deployment resource settings.
+4. Edit the Deployment resource settings. For morre information about these settings, review the content in this topic.
 5. Click **Update Deployment**.
 
 ## Worker Resources
@@ -36,7 +36,6 @@ The maximum number of tasks that a single worker can execute at once is 16. This
 `[Number of Workers]= ([Queued tasks]+[Running tasks])/(Worker Concurrency)`
 
 This calculation is computed by KEDA every 10 seconds. For more information on how workers are affected by changes to a Deployment, read [What Happens During a Code Deploy](deploy-code.md#what-happens-during-a-code-deploy).
-:::
 
 ## Scheduler Resources
 
