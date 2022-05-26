@@ -11,10 +11,6 @@ A Deployment on Astro is an instance of Astro Runtime that is powered by Apache 
 
 This guide walks you through the process of creating and configuring an Airflow Deployment.
 
-## Astro Runtime Versions
-
-The Astro Runtime versions provided in the Cloud UI are limited to patches for the most recent major and minor releases. Deprecated versions of Astro Runtime aren't available. To upgrade your Astro Runtime version, you’ll need to update your Docker image. For more information about upgrading Astro Runtime, see [Upgrade Astro Runtime](upgrade-runtime.md).
-
 ## Configure a Workspace
 
 When you first sign up for Astro, you can expect to be invited to a Workspace created for your team. Within a Workspace, you can create Deployments and push DAGs to any Deployment from the Astro CLI or from a CI/CD process. You're free to invite other users to that Workspace and create as many Deployments as you'd like.
@@ -28,7 +24,7 @@ To create an Airflow Deployment on Astro:
 3. Set the following:
     - **Name**
     - **Description**
-    - **Astro Runtime**: By default, the latest version of Astro Runtime is selected
+    - **Astro Runtime**: By default, the latest version of Astro Runtime is selected. The Astro Runtime versions provided in the Cloud UI are limited to patches for the most recent major and minor releases. Deprecated versions of Astro Runtime aren't available. To upgrade your Astro Runtime version, you’ll need to update your Docker image. For more information about upgrading Astro Runtime, see [Upgrade Astro Runtime](upgrade-runtime.md).
     - **Deployment Location**: The Astro Cluster in which you want to create this Deployment
 
 3. Click **Create Deployment** and give it a few moments to spin up. Within a few seconds, you should see the following:
