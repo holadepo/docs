@@ -9,6 +9,11 @@ description: Learn how to create and configure Astro Deployment resources.
 
 After you create an Astro Deployment, you can modify its resource settings to make sure that enough resources are allocated to complete tasks successfully.
 
+Astro supports the `AU` as the primary resource unit. In this context,
+
+- 1 AU = 0.1 CPU, .375 GB Memory
+- 10 AU = 1 CPU, 3.75 GB Memory
+
 ## Edit Deployment Resource Settings
 
 1. Log in to the [Cloud UI](https://cloud.astronomer.io) and select a Workspace.
@@ -47,6 +52,6 @@ If you experience delays in task execution, which you can track via the Gantt Ch
 
 ## Next Steps
 
-Set Astro environment variables. See [Set Environment Variables on Astro](environment-variables.md).
+[Set Environment Variables on Astro](environment-variables.md).
 
-Create and manage Astro API Deployment keys. See [Manage Deployment API Keys](api-keys.md).
+[Manage Deployment API Keys](api-keys.md).
