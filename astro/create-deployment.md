@@ -11,7 +11,7 @@ A Deployment on Astro is an instance of Astro Runtime that is powered by the cor
 
 ## Step 1: Select a Workspace
 
-When you first sign up for Astro, you are invited to your team Workspace. Within a Workspace, you can create Deployments and push DAGs to any Deployment from the Astro CLI or from a continuous integration and continuous delivery (CI/CD) process. You can also invite other users to the Workspace and create Deployments.
+Within a Workspace, you can create Deployments and push DAGs to any Deployment from the Astro CLI or from a continuous integration and continuous delivery (CI/CD) process. You can also invite other users to the Workspace and create Deployments.
 
 Log in to the [Cloud UI](https://cloud.astronomer.io). Your assigned Workspaces are listed below **Your Workspaces**.
 
