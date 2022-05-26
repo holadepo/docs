@@ -33,26 +33,7 @@ If you prefer, you can run the `astrocloud deployment create` command in the Ast
 
     The initial status of all new Deployments is `UNHEALTHY`. This indicates that the Deployment's Webserver and Scheduler are still spinning up in your cloud. In a few minutes the status changes to `HEALTHY` and you can move to step 5.
 
-## Step 3: Set Deployment Resources
-
-Once you create a Deployment, you can edit its resource settings to fit the needs of your tasks. Specifically, you can modify these components:
-
-- Worker resources
-- Scheduler count
-- Scheduler resources
-
-Astro supports the `AU` as the primary resource unit. In this context,
-
-- 1 AU = 0.1 CPU, .375 GB Memory
-- 10 AU = 1 CPU, 3.75 GB Memory
-
-1. Log in to the [Cloud UI](https://cloud.astronomer.io) and select a Workspace.
-2. Select a Deployment.
-3. Click **Edit Configuration**.
-4. Edit the Deployment resource settings.
-5. Click **Update Deployment**.
-
-## Step 4: Access the Airflow UI
+## Step 3: Access the Airflow UI
 
 1. Log in to the [Cloud UI](https://cloud.astronomer.io) and select a Workspace.
 2. Select a Deployment.
