@@ -30,7 +30,7 @@ The following operators are supported in Astro lineage:
 
 :::tip
 
-The `GreatExpectationsOperator` additionally emits data quality information to **Quality** tab in the **Lineage** view of the Cloud UI. For more information, see [Data Lineage on Astro](data-lineage.md).
+The `GreatExpectationsOperator` additionally emits data quality information to the **Quality** tab in the **Lineage** view of the Cloud UI. For more information, see [Data Lineage on Astro](data-lineage.md).
 
 :::
 

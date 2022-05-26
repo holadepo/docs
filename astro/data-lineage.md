@@ -52,7 +52,7 @@ If the Lineage graph only shows you a single node, it indicates that the job you
 In the **Lineage** page, Astronomer renders your data pipeline as a directed graph of **job** and **dataset** nodes:
 
 - A **job** node represents an individual step in your data pipeline, such as an Airflow task or a Spark job.
-- A **dataset** node represents a data source that a job interact with, such as a Snowflake database.
+- A **dataset** node represents a data source that a job interacts with, such as a Snowflake database.
 
 Directed vertices connect jobs to datasets and vice versa. A single vertex will never connect two jobs or two datasets together.
 
@@ -159,7 +159,7 @@ The **Compare** tab shows a list of past job runs for a given job. Using the com
 3. Select any two job runs from the list to enter the “Compare view” of your graph. In this view:
 
     - Jobs and datasets that experienced a code change between the time of your selected job runs are highlighted on the graph.
-    - Jobs and datasets that stayed the same between job runs are greyed out.
+    - Jobs and datasets that stayed the same between job runs are shaded.
     - Your selected job is shown with an anchor icon and a blue box.
     - The bottom of the graph shows information about your comparison.
 
@@ -184,10 +184,10 @@ Specifically, this page tracks following types of issues
 
 ## View a Summary of Past Runs
 
-By default, the **Lineage** page shows the last lineage graph you accessed. To see high level metrics about all of your job runs and access lineage graphs, open the **Explore** page on the lefthand sidebar. This page is structured similarly to the Airflow UI's calendar view: It contains a list of your most recent runs, as well as a calendar that shows all runs over the last year.
+By default, the **Lineage** page shows the last lineage graph you accessed. To see high level metrics about all of your job runs and access lineage graphs, open the **Explore** page on the left sidebar. This page is structured similarly to the Airflow UI's calendar view: It contains a list of your most recent runs, as well as a calendar that shows all runs over the last year.
 
 ![Lineage summary page](/img/docs/lineage-explore.png)
 
-Airflow tasks will appear as jobs with the name `<dag_id>.<task_id>`. For examplem, the job `example_dag_basic.extract` represents the `extract` task running within the `example_dag_basic` DAG.
+Airflow tasks will appear as jobs with the name `<dag_id>.<task_id>`. For example, the job `example_dag_basic.extract` represents the `extract` task running within the `example_dag_basic` DAG.
 
 This view can help you get a better sense of the scope of your lineage integrations. It can also help you confirm that a recent run was picked up by the lineage backend as expected.
