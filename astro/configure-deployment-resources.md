@@ -47,6 +47,6 @@ If you experience delays in task execution, which you can track via the Gantt Ch
 
 ## Next Steps
 
-Set Astro environment variables. See [Set Environment Variables on Astro](environment-variables.md).
+- [Set Environment Variables on Astro](environment-variables.md).
 
 Create and manage Astro API Deployment keys. See [Manage Deployment API Keys](api-keys.md).
