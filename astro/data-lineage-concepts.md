@@ -28,16 +28,16 @@ The following terms are used frequently when discussing data lineage and OpenLin
 
 ## OpenLineage and Airflow
 
-Using OpenLineage with Airflow gives you insight into your complex data ecosystems and can lead to better data governance. Airflow is a natural place to integrate data lineage because it touches and moves data across many parts of an organization.
+Using OpenLineage with Airflow gives you insight into your complex data ecosystems and can lead to better data governance. Airflow is a natural place to integrate data lineage because it touches and moves data across many parts of an Organization.
 
 The following are the primary capabilities OpenLineage with Airflow provides:
 
 - Quickly locate the cause of task failures by identifying issues in upstream datasets. For example, an upstream job outside of Airflow failed to populate a key dataset.
 - Easily see the affected area of any job failures or changes to data by visualizing the relationship between jobs and datasets.
-- Identify where key data is used in jobs across an organization.
+- Identify where key data is used in jobs across an Organization.
 
 These capabilities provide the following benefits:
 
 - Speeds your recovery from complex failures. The faster you can identify the problem and the affected area, the quicker you can resolve and prevent erroneous decisions being made from bad data.
-- Makes it easier for teams in your organization to work together . Visualizing the full scope of where a dataset is used reduces the time you spend on analysis.
+- Makes it easier for teams in your Organization to work together . Visualizing the full scope of where a dataset is used reduces the time you spend on analysis.
 - Ensures compliance with data regulations by helping you understanding where your data is used.

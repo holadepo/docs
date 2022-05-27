@@ -7,11 +7,11 @@ description: "Track and visualize the movement of your data with data lineage on
 
 ## Overview
 
-The **Lineage** tab in the Cloud UI can help you troubleshoot issues with your data pipelines and understand the movement of data across your organization.
+The **Lineage** tab in the Cloud UI can help you troubleshoot issues with your data pipelines and understand the movement of data across your Organization.
 
 From the **Lineage** tab on Astro, you can access the following four pages:
 
-- **Explore**: A real-time overview of all **jobs** that emit data lineage across your organization. A job can be an Airflow task or any other process configured to emit lineage data to Astronomer, such as a Spark job.
+- **Explore**: A real-time overview of all **jobs** that emit data lineage across your Organization. A job can be an Airflow task or any other process configured to emit lineage data to Astronomer, such as a Spark job.
 - **Issues**: A view of potential issues or statistical inconsistencies related to your jobs or datasets.
 - **Lineage**: A graph view that visualizes data lineage.
 - **Integrations**: A view of your current data lineage integrations. 
