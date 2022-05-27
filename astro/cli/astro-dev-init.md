@@ -37,6 +37,5 @@ $ astro dev init --runtime-version=4.0.7
 ## Related Commands
 
 - [`astro dev restart`](cli/astro-dev-restart.md)
-- [`astro dev init`](cli/astro-dev-init.md)
 - [`astro dev run`](cli/astro-dev-run.md)
 - [`astro dev logs`](cli/astro-dev-logs.md)

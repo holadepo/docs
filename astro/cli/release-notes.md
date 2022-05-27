@@ -9,7 +9,7 @@ description: Release notes for the Astro CLI.
 
 This document provides a summary of all changes made to the [Astro CLI](install-cli.md). For general product release notes, go to [Astro Release Notes](release-notes.md).
 
-If you have any questions or a bug to report, don't hesitate to reach out to us via Slack or Intercom. We're here to help.
+If you have any questions or a bug to report, reach out to [Astronomer Support](https://support.astronomer.io)
 
 ## Astro CLI v1.0.0
 
@@ -39,7 +39,7 @@ astrocloud auth login
 astro login
 ```
 
-For Astro users, these are the only changes to existing CLI functionality. All other commands will continue to work as expected. We strongly recommend that all users upgrade. For instructions, see [Configure the CLI](cli/configure-cli.md).
+For Astro users, these are the only changes to existing CLI functionality. All other commands will continue to work as expected. We strongly recommend that all users upgrade. For instructions, see [Migrate from `astrocloud` to `astro`](cli/configure-cli.md#migrate-from-astrocloud-to-astro).
 
 :::caution Possible Breaking Change
 
