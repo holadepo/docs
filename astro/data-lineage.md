@@ -44,7 +44,7 @@ By default, when you access the **Lineage** page from the left menu, the last li
 
 :::info
 
-A Lineage graph with a single node indicates that the job you selected didn't emit any information about input or output datasets. Typically, this occurs when an Airflow task isn't using a [supported Airflow operator](data-lineage-support-and-compatibility.md). You can still view the duration of this job over time.
+A lineage graph with a single node indicates that the job you selected didn't emit any information about input or output datasets. Typically, this occurs when an Airflow task isn't using a [supported Airflow operator](data-lineage-support-and-compatibility.md). You can still view the duration of this job over time.
 
 :::
 
