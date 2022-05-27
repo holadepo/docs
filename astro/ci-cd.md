@@ -43,8 +43,8 @@ This workflow is equivalent to the following bash script:
 $ export ASTRONOMER_KEY_ID="<your-api-key-id>"
 $ export ASTRONOMER_KEY_SECRET="<your-api-key-secret>"
 
-# Install the Astro CLI
-$ brew install astronomer/tap/astro@1.0.0
+# Install the latest version of Astro CLI
+$ brew install astronomer/tap/astro
 
 # Build your Astro project into a Docker image and push the image to your Deployment
 $ astro deploy <your-deployment-id>
@@ -52,7 +52,7 @@ $ astro deploy <your-deployment-id>
 
 :::info
 
-The following templates use [Astro CLI v1.0.0+](cli/cli-release-notes.md) to deploy via CI/CD. These templates will not work if you use the `astrocloud` executable. To upgrade, see [Install the Astro CLI](configure-cli.md).
+The following templates use [Astro CLI v1.0+](cli/cli-release-notes.md) to deploy via CI/CD. These templates will not work if you use the `astrocloud` executable. To upgrade, see [Install the Astro CLI](configure-cli.md).
 
 :::
 

@@ -17,12 +17,6 @@ Release date: May 27, 2022
 
 ### A Shared CLI for All Astronomer Users
 
-:::danger Breaking Change
-
-Astro CLI v1.0.0 includes breaking changes that might effect your existing CI/CD pipelines. Ensure that all of your CI/CD pipelines are updated to use the new CLI executable as described below before upgrading.
-
-:::
-
 The Astro CLI is now a single CLI executable built for all Astronomer products. This new generation of the CLI optimizes for a consistent local experience with Astro Runtime as well as the ability to more easily upgrade to Astro from other products hosted on Astronomer.
 
 To establish a shared framework between products, the Astro CLI now uses a single `astro` executable:
@@ -46,6 +40,13 @@ astro login
 ```
 
 For Astro users, these are the only changes to existing CLI functionality. All other commands will continue to work as expected. We strongly recommend that all users upgrade. For instructions, see [Configure the CLI](cli/configure-cli.md).
+
+:::caution Possible Breaking Change
+
+Upgrading to Astro CLI v1.0.0 includes breaking changes that might effect your existing CI/CD pipelines. Ensure that all of your CI/CD pipelines are updated to use the new CLI executable before upgrading.
+
+:::
+
 
 ### New Command To Set Astro Project Configurations
 
