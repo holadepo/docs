@@ -18,7 +18,7 @@ module.exports = {
       type: 'category',
       label: 'Get Started',
       items: [
-      'cli-quickstart',
+      'install-cli',
       'create-project',
       ],
     },
@@ -83,6 +83,7 @@ module.exports = {
         items: [
         'apply-platform-config',
         'upgrade-astronomer-stable',
+        'upgrade-astro-cli',
         'houston-api',
         'configure-platform-resources',
           ],
