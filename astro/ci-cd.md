@@ -52,7 +52,7 @@ $ astro deploy <your-deployment-id>
 
 :::info
 
-The following templates use [Astro CLI v1.0.0+](cli/cli-release-notes.md) to deploy via CI/CD. These templates will not work if you use a pre-1.0.0 version of the CLI.
+The following templates use [Astro CLI v1.0.0+](cli/cli-release-notes.md) to deploy via CI/CD. These templates will not work if you use the `astrocloud` executable. To upgrade, see [Install the Astro CLI](configure-cli.md).
 
 :::
 
@@ -359,8 +359,7 @@ To automate code deploys to a Deployment using [GitLab](https://gitlab.com/), co
       before_script:
        - apk add --update curl && rm -rf /var/cache/apk/*
       script:
-       - curl https://goreleaserdev.blob.core.windows.net/goreleaser-test-container/releases/v${siteVariables.cliVersion}/cloud-cli_${siteVariables.cliVersion}_Linux_x86_64.tar.gz -o astrocli.tar.gz
-       - tar xzf astrocli.tar.gz
+       - curl -sSL install.astronomer.io | sudo bash -s
        - astro deploy $ASTRONOMER_DEPLOYMENT_ID -f
       only:
        - main
