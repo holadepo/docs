@@ -18,7 +18,7 @@ From the **Lineage** tab on Astro, you can access the following four pages:
 
 You can use these pages to diagnose issues that may be difficult to troubleshoot in other environments. For example, if an Airflow task failed because a database schema changed, you can use the **Lineage** page on Astro to determine which job caused the change and which downstream tasks failed as a result.
 
-All members of your organization can view the **Lineage** page. For more information on data lineage and related concepts, see [Data Lineage Concepts](data-lineage-concepts.md).
+All members of your Organization can view the **Lineage** page. For more information on data lineage and related concepts, see [Data Lineage Concepts](data-lineage-concepts.md).
 
 :::info
 
