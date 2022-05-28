@@ -36,8 +36,8 @@ The following are the primary capabilities that OpenLineage with Airflow provide
 - Easily see the affected area of any job failures or changes to data by visualizing the relationship between jobs and datasets.
 - Identify where key data is used in jobs across an Organization.
 
-These capabilities provide the following benefits:
+Integrating OpenLineage with Airflow provides the following benefits:
 
-- Speeds your recovery from complex failures. The faster you can identify the problem and the affected area, the quicker you can resolve and prevent erroneous decisions being made from bad data.
-- Makes it easier for teams in your Organization to work together . Visualizing the full scope of where a dataset is used reduces the time you spend on analysis.
+- Allows you to quickly recover from complex failures. The faster you can identify the problem and the affected area, the quicker you can resolve and prevent erroneous decisions being made from bad data.
+- Makes it easier for teams in your Organization to work together. Being able to visualize the full scope of where and how a dataset is used reduces the time you spend on analysis.
 - Ensures compliance with data regulations by helping you understanding where your data is used.
