@@ -132,7 +132,7 @@ To see details on the assertions that have passed or failed, hover over a point 
 
 The **Distinct Count** chart shows the total number of distinct values for a given column.
 
-A distinct count can sometimes grow unexpectedly. For example, a successful campaign suddenly creates a set of new `customer_id` values in an order table. However, it can also suggest an underlying problem if, for example, a `menu_item_id` field shows that thousands of new menu items have been added overnight.
+Distinct count can sometimes grow unexpectedly. For example, a successful marketing campaign might suddenly create a set of new `customer_id` values in an order table. However, it can also suggest an underlying problem if, for example, a `menu_item_id` field shows that thousands of new menu items have been added overnight.
 
 #### Null Count (Column-level)
 
