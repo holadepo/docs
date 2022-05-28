@@ -79,7 +79,7 @@ To configure lineage on an existing Deployment on Runtime <4.2.0 without upgradi
 
 #### Verify
 
-To view lineage metadata, go to your Organization's [landing page](http://cloud.astronomer.io) and open the **Lineage** tab in the Organization view. You should see your most recent DAG run represented as a data lineage graph in the **Lineage** page.
+To view lineage metadata, go to the Organization view of the Cloud UI and open the **Lineage** tab. You should see your most recent DAG run represented as a data lineage graph in the **Lineage** page.
 
 >**Note:** Lineage information appears only for DAGs that use operators that have extractors defined in the `openlineage-airflow` library, such as the `PostgresOperator` and `SnowflakeOperator`. For a list of supported operators, see [Data Lineage Support and Compatibility](data-lineage-support-and-compatibility.md).
 
