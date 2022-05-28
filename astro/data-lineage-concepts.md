@@ -32,7 +32,7 @@ Using OpenLineage with Airflow gives you insight into your complex data ecosyste
 
 The following are the primary capabilities OpenLineage with Airflow provides:
 
-- Quickly locate the cause of task failures by identifying issues in upstream datasets. For example, an upstream job outside of Airflow failed to populate a key dataset.
+- Quickly locate the cause of task failures by identifying issues in upstream datasets. For example, you might see that a task failed because an upstream job outside of Airflow failed to populate a particular dataset.
 - Easily see the affected area of any job failures or changes to data by visualizing the relationship between jobs and datasets.
 - Identify where key data is used in jobs across an Organization.
 
