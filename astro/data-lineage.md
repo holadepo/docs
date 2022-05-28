@@ -117,7 +117,7 @@ Use the **Quality** tab to detect unexpected changes or statistical variance in 
 
 #### Rows
 
-The Rows chart shows the total number of rows in the dataset over time. A significant change in rows can occur naturally (for example: when a rapid increase of customer orders occurs during the holiday season). However, it can also indicate an error in an upstream job, especially if it is sudden or unexpected.
+The Rows chart shows the total number of rows in the dataset over time. A significant change in rows can occur naturally. For example, a rapid increase of customer orders occurs during the holiday season. However, it can also indicate an error in an upstream job, especially if it is sudden or unexpected.
 
 #### Bytes
 
