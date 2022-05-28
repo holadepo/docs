@@ -38,7 +38,7 @@ The **Lineage** page shows lineage data only for the most recent run of a given 
 
 :::info
 
-By default, when you access the **Lineage** page from the left menu, the last lineage graph you viewed is displayed. If you go directly to the **Lineage** page without viewing a lineage graph, no lineage graph data is displayed. If this happens, access a job run using the search bar or use the **Explore** page to populate the **Lineage** page with data.
+By default, when you access the **Lineage** page from the left menu, the last lineage graph you viewed is displayed. If you go directly to the **Lineage** page without viewing a lineage graph, no lineage graph data is displayed. If this happens, you can access a job run using the search bar or use the **Explore** page to populate the **Lineage** page with data.
 
 :::
 
