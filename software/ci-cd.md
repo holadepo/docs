@@ -42,7 +42,7 @@ From there, you'll write a script that allows your Service Account to do the fol
 2. Authenticate to a Docker Registry
 3. Push your Image to that Docker Registry
 
-From there, a webhook triggers an update to your Airflow Deployment using the CI/CD tool of your choice. At its core, the Astro CLI does the equivalent of the above upon every manual `$ astro deploy`.
+From there, a webhook triggers an update to your Airflow Deployment using the CI/CD tool of your choice. The Astro CLI completes an authentication and push for every manual `$ astro deploy` command.
 
 The rest of this guide describes how to create a Service Account and what your CI/CD script should look like based on the tool you're using.
 
