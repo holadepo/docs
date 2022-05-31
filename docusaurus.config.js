@@ -15,7 +15,7 @@ module.exports = {
   themeConfig: {
     image: 'img/meta.png',
     sidebar: {
-      autoCollapseSidebarCategories: true,
+      autoCollapseCategories: true,
     },
     algolia: {
       apiKey: '99354995bfad26ed950bdb701bc56b6b',
