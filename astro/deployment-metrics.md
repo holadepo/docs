@@ -151,7 +151,7 @@ The **Worker CPU** and **Worker Memory** charts in the Cloud UI provide visibili
 
 **Worker CPU** records the peak CPU usage, while **Worker Memory** records the peak memory usage by worker nodes over hour-long intervals. The bolded values above each graph show the maximum CPU/ memory usage by a single worker at any point in time over the last 24 hours.
 
-> **Note:** A known issue with Celery may cause worker memory allocation to increase without a corresponding increase in task count or DAG memory use. To correct this issue, Astronomer recommends deploying code to your Deployments. Deploying code to your Deployments restarts the Celery worker and resets memory requests. See [Deploy Code to Astro](deploy-code.md). This issue should not affect your tasks or cause OutOfMemory (OOM) errors. If you experience complications, contact Astronomer Support. 
+> **Note:** A known issue with Celery may cause worker memory allocation to increase without a corresponding increase in task count or DAG memory use. To correct this issue, run a no operation deploy to restart the Celery worker and reset memory requests. See [Deploy Code to Astro](deploy-code.md). This issue should not affect your tasks or cause OutOfMemory (OOM) errors. If you experience complications, contact Astronomer Support. 
 
 ## DAG Runs
 
