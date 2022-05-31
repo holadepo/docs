@@ -32,11 +32,11 @@ After you complete these steps, upgrade to Astro CLI v1.0+ by following the inst
 
 ### New Command to Run DAG Unit Tests with pytest
 
-You can now run custom unit tests for all DAGs in your Astro project with `astro dev pytest`, a new Astro CLI command that uses pytest, a common testing framework for Python. As part of this change, new Astro projects created via astrocloud dev init now include a tests directory, which includes one example pytest built by Astronomer. In addition to running tests locally, you can also run pytest as part of the Astro deploy process. More information in [Release Notes](https://docs.astronomer.io/astro/cli-release-notes#new-command-to-run-dag-unit-tests-with-pytest)
+You can now run custom unit tests for all DAGs in your Astro project with `astro dev pytest`, a new Astro CLI command that uses pytest, a common testing framework for Python. As part of this change, new Astro projects created via astro dev init now include a tests directory, which includes one example pytest built by Astronomer. In addition to running tests locally, you can also run pytest as part of the Astro deploy process. More information in [Release Notes](https://docs.astronomer.io/astro/cli-release-notes#new-command-to-run-dag-unit-tests-with-pytest)
 
 ### New Command to Parse DAGs for Errors
 
-New `astro dev parse` command that allows you to run a basic test against your Astro project to ensure that your DAGs are able to to render in the Airflow UI. `astro deploy` now automatically applies tests from astrocloud dev parse to your Astro project before completing the deploy process. More information in [Release Notes](https://docs.astronomer.io/astro/cli-release-notes#new-command-to-parse-dags-for-errors)
+New `astro dev parse` command that allows you to run a basic test against your Astro project to ensure that your DAGs are able to to render in the Airflow UI. `astro deploy` now automatically applies tests from astro dev parse to your Astro project before completing the deploy process. More information in [Release Notes](https://docs.astronomer.io/astro/cli-release-notes#new-command-to-parse-dags-for-errors)
 
 ## Breaking Changes
 
