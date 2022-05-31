@@ -160,7 +160,7 @@ module.exports = {
       },
       {
       type: 'category',
-      label: 'CLI Command Reference',
+      label: 'Command Reference',
       items: [
         'cli/astro-login',
         'cli/astro-logout',
@@ -186,6 +186,11 @@ module.exports = {
         'cli/astro-version',
         'cli/astro-workspace-list',
         'cli/astro-workspace-switch',],
+    },
+    {
+      type: 'doc',
+      label: 'Configure the CLI',
+      id: 'cli/configure-cli'
     },
     {
       type: 'doc',
