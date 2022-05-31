@@ -186,7 +186,7 @@ This feature requires Astro Runtime [4.0.10+](runtime-release-notes.md#4010). To
 
 While it is a good proxy, the tag shown in the Airflow UI does not forcibly represent the Docker image that is running on your Deployment's Scheduler, Triggerer, or workers.
 
-This value is also distinct from the **Docker Image** that is shown in the Deployment view of the Cloud UI, which displays the image tag as specified in the Cloud API request that is triggered on `astro deploy`. The image tag in the Airflow UI can generally be interpreted to be a more accurate proxy to what is running on all components of your Deployment.
+This value is also distinct from the **Docker Image** that is shown in the Deployment view of the Cloud UI, which displays the image tag as specified in the Cloud API request that is triggered on `astro deploy`. The image tag in the Airflow UI can be interpreted to be a more accurate proxy to what is running on all components of your Deployment.
 
 If you ever have trouble verifying a code push to a Deployment on Astro, reach out to [Astronomer Support](https://support.astronomer.io).
 

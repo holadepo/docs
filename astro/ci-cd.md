@@ -34,7 +34,7 @@ At a high level, these CI/CD pipelines will:
 
 1. Access Deployment API key credentials. These credentials must be set as OS-level environment variables called `ASTRONOMER_KEY_ID` and `ASTRONOMER_KEY_SECRET`.
 2. Install the latest version of the Astro CLI.
-3. Run `astro deploy`. This builds your Astro project into a Docker image, authenticates to Astro using your Deployment API key, and pushes the image to your Deployment.
+3. Run `astro deploy`. This creates a Docker image for your Astro project, authenticates to Astro using your Deployment API key, and pushes the image to your Deployment.
 
 This workflow is equivalent to the following bash script:
 

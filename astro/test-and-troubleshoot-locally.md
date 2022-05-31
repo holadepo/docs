@@ -30,7 +30,7 @@ astro dev parse
 
 This command parses your DAGs to ensure that they don't contain any basic syntax or import errors and that they can successfully render in the Airflow UI.
 
-Generally speaking, `astro dev parse` is a more convenient but less customizable version of `astro dev pytest`. If you don't have any specific test files that you want to run on your DAGs, then we recommend using `astro dev parse` as your primary testing tool. For more information about this command, see the [CLI Command Reference](cli/astro-dev-parse.md).
+The command `astro dev parse` is a more convenient but less customizable version of `astro dev pytest`. If you don't have any specific test files that you want to run on your DAGs, Astronomer recommends using `astro dev parse` as your primary testing tool. For more information about this command, see the [CLI Command Reference](cli/astro-dev-parse.md).
 
 ### Run Tests with Pytest
 

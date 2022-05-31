@@ -7,7 +7,7 @@ description: Reference documentation for astro workspace switch.
 
 ## Description
 
-Switch to another Workspace. After running the command, you will be prompted to select from a list of all Workspaces in your Organization that you have access to. To switch to a given Workspace, enter the number next to the Workspace's name in the list.
+Switch to another Workspace. After running the command, a prompt appears and you'll need to select a Workspace. To select a Workspace, enter the number next to the Workspace name in the list.
 
 ## Usage
 

@@ -248,7 +248,7 @@ This is supported both on Astro and in the context of local development.
 
 ## Override the CLI's Docker Compose File (Local Development Only)
 
-The Astro CLI is built on top of [Docker Compose](https://docs.docker.com/compose/), which is a tool for defining and running multi-container Docker applications. You can override the CLI's Docker Compose configurations by adding a `docker-compose.override.yml` file to your Astro project. Any values in this file override the CLI's default settings whenever you run `astro dev start`.
+The Astro CLI is built on top of [Docker Compose](https://docs.docker.com/compose/), which is a tool for defining and running multi-container Docker applications. To override CLI Docker Compose configurations, add a `docker-compose.override.yml` file to your Astro project. Any values in this file override the default CLI settings whenever you run `astro dev start`.
 
 To see what values you can override, reference the CLI's [Docker Compose file](https://github.com/astronomer/astro-cli/blob/main/airflow/include/composeyml.go). The linked file is for the original Astro CLI, but the values here are identical to those used in the Astro CLI. Common use cases for Docker Compose overrides include:
 

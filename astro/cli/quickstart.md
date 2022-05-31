@@ -58,7 +58,7 @@ To use the Astro CLI on Windows, you must have:
 
     For example, to install v1.0.0 of the Astro CLI on a Windows machine with an AMD 64 architecture, download `astro_1.0.0-converged_windows_amd64.zip`.
 
-2. Run the following command to unzip the executable:
+2. If the `.zip` file does not automatically unzip, run the following command to unzip the executable:
 
     ```sh
     tar -xvzf .\astrocli.tar.gz

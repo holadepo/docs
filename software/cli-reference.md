@@ -181,7 +181,7 @@ astro context delete <basedomain>
 
 ## astro context list
 
-View a list of domains for all Astronomer installations that you have access to. An Astronomer installation will appear on this list if you have authenticated to it at least once via `astro login`.
+View a list of domains for all Astronomer installations that you have access to. An Astronomer installation will appear on this list if you have authenticated to it at least once using `astro login`.
 
 ### Usage
 
@@ -191,9 +191,9 @@ astro context list
 
 ## astro context switch
 
-Switch to a different Astronomer installation. You can switch to a given Astronomer installation if you have authenticated to it at least once via `astro login`.
+Switch to a different Astronomer installation. You can switch to a given Astronomer installation if you have authenticated to it at least once using `astro login`.
 
-Note that after switching to a different Astronomer installation, you might have to re-authenticate to the installation via `astro login`.
+Note that after switching to a different Astronomer installation, you might have to re-authenticate to the installation using `astro login`.
 
 ### Usage
 
@@ -550,7 +550,7 @@ When you run this command, the following skeleton files are generated in your cu
 
 ## astro dev kill
 
-Forces running containers in your local Airflow environment to stop. Unlike `astro dev stop`, which only pauses running containers, `astro dev kill` will delete all data associated with your local Postgres metadata database, including Airflow Connections, logs, and task history.
+Forces running containers in your local Airflow environment to stop. Unlike `astro dev stop`, which only pauses running containers, `astro dev kill` deletes all data associated with your local Postgres metadata database, including Airflow Connections, logs, and task history.
 
 This command is most often used to restart a cluster when testing new DAGs or settings in a non-production environment. After using `astro dev kill`, you can restart your environment with `astro dev start`.
 

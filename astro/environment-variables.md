@@ -87,7 +87,7 @@ This process occurs every time you update the environment variable's key or valu
 
 ## Set Environment Variables via Dockerfile
 
-If you want to store environment variables using an external version control tool, we recommend setting them in your `Dockerfile`. This file is automatically created when you first initialize an Astro project via `astro dev init`.
+If you want to store environment variables using an external version control tool, Astronomer recommends setting them in your `Dockerfile`. This file is automatically created when you first initialize an Astro project using `astro dev init`.
 
 :::caution
 
