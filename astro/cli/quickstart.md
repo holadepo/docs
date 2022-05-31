@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Quickstart'
-title: 'Install the Astro CLI'
+title: 'Astro CLI Quickstart'
 id: cli-quickstart
 description: Install the Astro CLI, the best way to run Apache Airflow and test data pipelines on your local machine.
 ---
