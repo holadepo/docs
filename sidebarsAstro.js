@@ -18,7 +18,6 @@ module.exports = {
       type: 'category',
       label: 'Get Started',
       items: [
-        'install-cli',
         'create-project',
       ],
     },
@@ -161,6 +160,7 @@ module.exports = {
       {
       type: 'category',
       label: 'Command Reference',
+      link: { type: 'doc', id: 'cli/reference' },
       items: [
         'cli/astro-login',
         'cli/astro-logout',
