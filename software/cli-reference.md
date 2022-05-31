@@ -209,7 +209,7 @@ Deploys code in your Airflow project directory to any Airflow Deployment on Astr
 
 Run `astro deploy <your-deployment-release-name> [flags]` in your terminal to push a local Airflow project as a Docker image to your Airflow Deployment on Astronomer.
 
-If you have the appropriate Workspace and Deployment-level permissions, your code is packaged into a Docker image, pushed to Astronomer's Docker Registry, and applied to your Airflow Webserver, Scheduler(s), and Worker(s).
+If you have the appropriate Workspace and Deployment-level permissions, your code is packaged into a Docker image, pushed to Astronomer's Docker Registry, and applied to your Airflow Webserver, Scheduler(s), and Worker(s). Before completing the process, it tests your DAGs in your Astro project for errors. If this test fails, the deploy to Astro will also fail. This is the same test which runs locally with `astro dev parse`.
 
 To identify your Deployment's release name, go to **Settings** > **Basics** > **Release Name** in the Software UI or run `astro deployment list`.
 
@@ -221,7 +221,9 @@ If you run `astro deploy` without specifying `your-deployment-release-name`, the
 | ---------------- | ---------- | ----------------------------------------------------------------------------------- |
 | `--force`        | None       | Forces deploy even if there are uncommitted changes.                                |
 | `--prompt`       | None       | Forces prompt for choosing a target Deployment.                                     |
+| `--pytest`       | None       | Deploy code to Astro only if the specified Pytests are passed.                      |
 | `--save`         | None       | Saves this directory/Deployment combination for future deploys.                     |
+| `--test`         | None       | A valid filepath within your Astro project to an alternative pytest file or directory. |
 | `--workspace-id` | String     | Lists available Deployments in your Workspace and prompts you to pick one.          |
 | `--no-cache`     | None       | Do not use any images from the container engine's cache when building your project. |
 
@@ -575,6 +577,26 @@ Run `astro dev logs [flags]` to start tracking logs for your Scheduler, Webserve
 | `--webserver` | None       | Outputs only Webserver logs.                       |
 | `--triggerer` | None       | Outputs only Triggerer logs.                       |
 
+## astro dev parse
+
+Parse the DAGs in a locally hosted Astro project to quickly check them for errors. For more information about testing DAGs locally, read [Run Tests with the Astro CLI](test-and-troubleshoot-locally.md#run-tests-with-the-astro-cli).
+
+:::info
+
+This command requires Astro Runtime version `4.1.0`+ or for `pytest` to be present in your `requirments.txt` file. For more information, see [Astro Runtime Release Notes](https://docs.astronomer.io/astro/runtime-release-notes#astro-runtime-410).
+
+:::
+
+### Usage
+
+`astro dev parse`
+
+### Flags
+
+| Flag          | Value Type | Usage                                              |
+| ------------- | ---------- | -------------------------------------------------- |
+| `--env`       | string     | The filepath to your environment variables. (The default is `.env`)  |
+
 ## astro dev ps
 
 Lists all running Docker containers for your local Airflow environment. This command can only be used in a project directory and works similarly to `docker ps`.
@@ -582,6 +604,45 @@ Lists all running Docker containers for your local Airflow environment. This com
 ### Usage
 
 `astro dev ps`
+
+## astro dev pytest
+
+Run unit tests for your data pipelines on Astro with `pytest`, a testing framework for Python. When you run this command, the Astro CLI creates a local Python environment that includes your DAG code, dependencies, and Astro Runtime Docker image. The CLI then runs any pytests in the `tests` directory of your Astro project and shows you the results of those tests in your terminal.
+
+For more information on this functionality, see [Test and Troubleshoot Locally](test-and-troubleshoot-locally.md).
+
+:::info
+
+This command requires Astro Runtime version `4.1.0`+ or for `pytest` to be present in your `requirments.txt` file. For more information, see [Astro Runtime Release Notes](https://docs.astronomer.io/astro/runtime-release-notes#astro-runtime-410).
+
+:::
+
+### Usage
+
+`astro dev pytest <pytest-filepath>` to run specfic Pytests on your DAGs. use `<pytest-filepath>` to specify a specific test. 
+
+### Flags
+
+| Flag          | Value Type | Usage                                              |
+| ------------- | ---------- | -------------------------------------------------- |
+| `--env`       | string     | The filepath to your environment variables. (The default is `.env`)  |
+
+## astro dev restart
+
+Stop your Airflow environment, rebuild your Astronomer project into a Docker image, and restart your Airflow environment with the new Docker image.
+
+This command can be used to rebuild an Astronomer project and run it locally. For more information, read [Develop and Run a Project Locally](develop-project.md#build-and-run-a-project-locally).
+
+### Usage
+
+astro dev restart
+
+### Flags
+
+| Flag          | Value Type | Usage                                              |
+| ------------- | ---------- | -------------------------------------------------- |
+| `--env`       | string     | The filepath to your environment variables. (The default is `.env`)  |
+
 
 ## astro dev run
 
