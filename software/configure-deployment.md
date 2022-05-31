@@ -7,7 +7,7 @@ description: Configure your Airflow Deployment's resources on Astronomer Softwar
 
 ## Overview
 
-An Airflow Deployment on Astronomer is an instance of Apache Airflow that was created either via the Software UI or the Astro CLI. Each Airflow Deployment on Astronomer is hosted on a single Kubernetes namespace, has a dedicated set of resources, and operates with an isolated Postgres Metadata Database.
+An Airflow Deployment on Astronomer is an instance of Apache Airflow that was created using the Software UI or the Astro CLI. Each Airflow Deployment on Astronomer is hosted on a single Kubernetes namespace, has a dedicated set of resources, and operates with an isolated Postgres Metadata Database.
 
 This guide walks you through the process of creating and configuring an Airflow Deployment on Astronomer.
 
@@ -209,7 +209,7 @@ By default, you can deploy DAGs to an Airflow Deployment by building them into a
 
 This mechanism builds your DAGs into a Docker image alongside all other files in your Airflow project directory, including your Python and OS-level packages, your Dockerfile, and your plugins.
 
-The resulting image is then used to generate a set of Docker containers for each of Airflow's core components. Every time you run `astro deploy` via the Astro CLI, your DAGs are rebuilt into a new Docker image and all Docker containers are restarted.
+The resulting image is then used to generate a set of Docker containers for each of Airflow's core components. Every time you run `astro deploy` in the Astro CLI, your DAGs are rebuilt into a new Docker image and all Docker containers are restarted.
 
 Since the image-based deploy does not require additional setup, we recommend it for those getting started with Airflow.
 

@@ -17,13 +17,13 @@ A few clarifying notes:
 * If you’d like your IAM role to apply to more than 1 deployment, you must annotate each deployment.
 * You must use the Astro CLI to pass IAM role annotations.
 * Only Workspace Admins can pass IAM role annotations.
-* Once a Deployment is created or updated with an IAM role, there is no way to delete that annotation.
+* Once a Deployment is created or updated with an IAM role, the annotation can't be deleted.
 
 ## Prerequisites
 
 * [The Astro CLI](cli-quickstart.md)
 * Admin access on an Astronomer Workspace
-* Direct access to your Kubernetes Cluster (e.g. permission to run `$ kubectl describe po`)
+* Direct access to your Kubernetes Cluster (for example, permission to run `$ kubectl describe po`)
 * A compatible version of Kubernetes as described in Astronomer's [Version Compatibility Reference](version-compatibility-reference.md)
 
 ## AWS

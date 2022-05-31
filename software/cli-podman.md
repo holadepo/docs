@@ -80,7 +80,7 @@ To set up Podman for an Astronomer project:
     ```sh
     # Store the Identity for your Podman instance
     $ export CONTAINER_SSHKEY=<your-podman-identity>
-    # Ensure that all images created via `podman build` are readable by Software Deployments.
+    # Ensure that all images created using `podman build` are readable by Software Deployments.
     # Primarily for use in CI/CD pipelines which require use of the Podman CLI.
     $ export BUILDAH_FORMAT=docker
     ```
@@ -149,7 +149,7 @@ You can now run the Astro CLI in Podman containers for this Astronomer project.
 
 ## Switch Between Using Docker and Podman
 
-Once you set up the Astro CLI to use Podman on your local machine, the CLI will automatically run Podman containers whenever you run a command that requires them. To revert back to default behavior and run CLI commands in Docker containers, run the following command:
+Once you set up the Astro CLI to use Podman on your local machine, the CLI automatically runs Podman containers whenever you run a command that requires them. To revert to the default behavior and run CLI commands in Docker containers, run the following command:
 
 ```sh
 astro config set container.engine docker

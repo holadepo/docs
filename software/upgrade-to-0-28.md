@@ -181,7 +181,7 @@ To do so via Homebrew, run:
 
 `brew install astronomer/tap/astro@0.28`
 
-Earlier versions of the Astro CLI are backwards incompatible with Astronomer v0.28. All team members within your organization must upgrade the Astro CLI individually before taking any further action on the platform or in a local Airflow environment. For a detailed breakdown of CLI changes between versions, refer to the [CLI Release Notes](cli-release-notes.md). For detailed install guidelines and more information on the Astro CLI, refer to [Astro CLI Quickstart](cli-quickstart.md).
+Earlier versions of the Astro CLI are backwards incompatible with Astronomer v0.28. All team members within your organization must upgrade the Astro CLI individually before taking any further action on the platform or in a local Airflow environment. For more information about CLI changes between versions, see [CLI Release Notes](cli-release-notes.md). For installation guidelines and information about the Astro CLI, see [Astro CLI Quickstart](cli-quickstart.md).
 
 ## Roll Back to Software v0.25
 

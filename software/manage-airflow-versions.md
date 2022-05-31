@@ -54,9 +54,9 @@ Once you select a version, you can expect to see a banner next to **Airflow Vers
 
 > **Note:** If you'd like to change the version of Airflow you'd like to upgrade to, you can do so at anytime by clicking **Cancel**, re-selecting a new version and once again clicking **Upgrade**. More on that below.
 
-### via the Astro CLI
+### with the Astro CLI
 
-To initialize the Airflow upgrade process via the Astronomer CLI, first make sure you're authenticated by running `$ astro login <base-domain>`.
+To use the Astro CLI to initialize the Airflow upgrade process, run `$ astro login <base-domain>` first to make sure you're authenticated .
 
 Once authenticated, grab the `Deployment ID` of the Airflow Deployment you'd like to upgrade by running:
 
@@ -102,7 +102,7 @@ To complete the upgrade, all you have to do is add a corresponding AC image to y
 
 ### 1. Locate your Dockerfile in your Project Directory
 
-First, open the `Dockerfile` within your Astronomer directory. When you initialized an Airflow project via the Astro CLI, the following files should have been automatially generated:
+First, open the `Dockerfile` within your Astronomer directory. When you used the Astro CLI to initialize an Airflow project, the following files should have been automatically generated:
 
 ```
 .

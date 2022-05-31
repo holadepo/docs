@@ -27,7 +27,7 @@ From this directory, run the following Astro CLI command:
 astro dev init --use-astronomer-certified
 ```
 
-This will generate the following files:
+This generates the following files:
 
 ```py
 .
