@@ -11,6 +11,8 @@ Astro CLI v1.0 delivers several new features to Astronomer Software and establis
 
 Several commands and their flags have been updated as part of this release, resulting in breaking changes for users of Astronomer Software. Use this document to learn about these breaking changes and prepare for your upgrade to Astro CLI v1.0.
 
+This information applies only to users who are upgrading the Astro CLI from a pre-1.0 to a post-1.0 version. To install the latest version of the CLI for the first time, see [Install the CLI](install-cli.md).
+
 ## Upgrade Checklist
 
 Before installing Astro CLI v1.0+, complete all of the following steps:

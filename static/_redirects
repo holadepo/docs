@@ -97,7 +97,7 @@
 
 # Redirect to converged CLI docs
 /install-cli /astro/install-cli 301
-/astro/install-cli /astro/cli/quickstart 301
+/astro/install-cli /astro/cli/get-started 301
 /astro/cli-reference /astro/cli/reference 301
 /astro/cli-release-notes /astro/cli/release-notes 301
 /software/cli-quickstart /software/install-cli 301

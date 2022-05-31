@@ -13,7 +13,7 @@ The Astro CLI is open source and built for data practitioners everywhere. The bi
 
 ## Quickstart
 
-Follow the [Astro CLI Quickstart](cli-quickstart.md) to install the CLI and run your first Astro project locally.
+Follow the [Astro CLI Quickstart](get-started.md) to install the CLI and run your first Astro project locally.
 
 ## Features
 

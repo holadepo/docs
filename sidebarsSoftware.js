@@ -40,6 +40,7 @@ module.exports = {
         ],
       },
       'cli-podman',
+      'upgrade-astro-cli',
     ],
     },
     {
@@ -83,7 +84,6 @@ module.exports = {
         items: [
         'apply-platform-config',
         'upgrade-astronomer-stable',
-        'upgrade-astro-cli',
         'houston-api',
         'configure-platform-resources',
           ],
