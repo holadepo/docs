@@ -607,7 +607,7 @@ Lists all running Docker containers for your local Airflow environment. This com
 
 ## astro dev pytest
 
-Run unit tests for your data pipelines on Astro with `pytest`, a testing framework for Python. When you run this command, the Astro CLI creates a local Python environment that includes your DAG code, dependencies, and Astro Runtime Docker image. The CLI then runs any pytests in the `tests` directory of your Astro project and shows you the results of those tests in your terminal.
+Run unit tests for your data pipelines with `pytest`, a testing framework for Python. When you run this command, the Astro CLI creates a local Python environment that includes your DAG code, dependencies, and Astronomer Certified Docker image. The CLI then runs any pytests in the `tests` directory of your Astro project and shows you the results of those tests in your terminal.
 
 For more information on this functionality, see [Test and Troubleshoot Locally](test-and-troubleshoot-locally.md).
 
@@ -619,7 +619,7 @@ This command requires Astro Runtime version `4.1.0`+ or for `pytest` to be prese
 
 ### Usage
 
-`astro dev pytest <pytest-filepath>` to run specfic Pytests on your DAGs. use `<pytest-filepath>` to specify a specific test. 
+`astro dev pytest <pytest-filepath>` to run specfic Pytests on your DAGs. Use `<pytest-filepath>` to specify a specific test. 
 
 ### Flags
 
@@ -629,9 +629,9 @@ This command requires Astro Runtime version `4.1.0`+ or for `pytest` to be prese
 
 ## astro dev restart
 
-Stop your Airflow environment, rebuild your Astronomer project into a Docker image, and restart your Airflow environment with the new Docker image.
+Stop your Airflow environment, rebuild your Astro project into a Docker image, and restart your Airflow environment with the new Docker image.
 
-This command can be used to rebuild an Astronomer project and run it locally. For more information, read [Develop and Run a Project Locally](develop-project.md#build-and-run-a-project-locally).
+This command can be used to rebuild an Astro project and run it locally. For more information, read [Develop and Run a Project Locally](develop-project.md#build-and-run-a-project-locally).
 
 ### Usage
 
