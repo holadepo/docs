@@ -19,7 +19,7 @@ Astro supports the `AU` as the primary resource unit. In this context,
 1. Log in to the [Cloud UI](https://cloud.astronomer.io) and select a Workspace.
 2. Select a Deployment.
 3. Click **Edit Configuration**.
-4. Edit the Deployment resource settings. For morre information about these settings, review the content in this topic.
+4. Edit the Deployment resource settings. For more information about these settings, review the content in this topic.
 5. Click **Update Deployment**.
 
 ## Worker Resources
