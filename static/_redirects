@@ -158,7 +158,7 @@
 /enterprise/workspace-permissions /software/workspace-permissions 301
 
 # redirect links to renamed files
-configure-deployment / configure-deployment-resources 301
+/astro/configure-deployment /astro/configure-deployment-resources 301
 
 # redirect links out in the wild (beyond our control)
 /v2/* /astro 301
