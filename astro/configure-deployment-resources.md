@@ -14,6 +14,8 @@ Astro supports the `AU` as the primary resource unit. In this context,
 - 1 AU = 0.1 CPU, .375 GB Memory
 - 10 AU = 1 CPU, 3.75 GB Memory
 
+If you haven't created your Astro Deployment, see [Create a Deployment](create-deployment.md).
+
 ## Edit Deployment Resource Settings
 
 1. Log in to the [Cloud UI](https://cloud.astronomer.io) and select a Workspace.
@@ -21,6 +23,8 @@ Astro supports the `AU` as the primary resource unit. In this context,
 3. Click **Edit Configuration**.
 4. Edit the Deployment resource settings. For more information about these settings, review the content in this topic.
 5. Click **Update Deployment**.
+
+    The Airflow components of your Deployment automatically restart to apply the updated resource allocations. This action is equivalent to deploying code to your Deployment and does not impact running tasks that have 24 hours to complete before running workers are terminated. See [What Happens During a Code Deploy](deploy-code.md#what-happens-during-a-code-deploy).
 
 ## Worker Resources
 

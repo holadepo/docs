@@ -7,7 +7,7 @@ description: Learn how to create an Astro Deployment.
 
 ## Overview
 
-A Deployment on Astro is an instance of Astro Runtime that is powered by the core components of Apache Airflow including a metadata database, a Webserver, one or more Schedulers, and one or more Workers. Every Deployment is hosted on a single Astro Cluster, has an isolated set of resources, and operates with a dedicated Postgres metadata database.
+A Deployment on Astro is an instance of Astro Runtime that is powered by the core components of Apache Airflow. This includes: the Airflow Webserver, the Triggerer, a Postgres metadata database, one or more Schedulers, and one or more workers. Every Deployment is hosted on a single Astro Cluster with its own dedicated resources and you can customize it to meet the unique requirements of your Organization. Every Astro Cluster operates with a primary database that hosts the individual databases for each Deployment.
 
 ## Step 1: Select a Workspace
 
@@ -27,11 +27,11 @@ If you prefer, you can run the `astrocloud deployment create` command in the Ast
     - **Description**: Optional. Enter a description for your Deployment. 
     - **Cluster**: Select the Astro Cluster in which you want to create this Deployment.
 4. Optional. Edit the Deployment resource settings. See [Configure Deployment Resources](configure-deployment-resources.md). 
-5. Click **Create Deployment** and within a short period the following screen appears:
+5. Click **Create Deployment**. The following screen appears:
 
     ![Cloud UI Deployment Configuration](/img/docs/deployment-configuration.png)
 
-    The initial status of all new Deployments is `UNHEALTHY`. This indicates that the Deployment's Webserver and Scheduler are still spinning up in your cloud. In a few minutes the status changes to `HEALTHY` and you can move to step 5.
+    The initial status of all new Deployments is `UNHEALTHY`. This indicates that the Deployment's Webserver and Scheduler are being created in your Astro Cluster. In a few minutes, the status changes to `HEALTHY` and you can move to step 3.
 
 ## Step 3: Access the Airflow UI
 
