@@ -7,7 +7,7 @@ description: Learn how to create and configure Astro Deployment resources.
 
 ## Overview
 
-After you create an Astro Deployment, you can modify its resource settings to make sure that enough resources are allocated to complete tasks successfully.
+After you create an Astro Deployment, you can modify its resource settings to make sure that your tasks have the CPU and memory required to complete successfully.
 
 Astro supports the `AU` as the primary resource unit. In this context,
 
