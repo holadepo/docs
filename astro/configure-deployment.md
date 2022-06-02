@@ -24,7 +24,9 @@ To create an Airflow Deployment on Astro:
 3. Set the following:
     - **Name**
     - **Description**
-    - **Astro Runtime**: By default, the latest version of Astro Runtime is selected. The Astro Runtime versions provided in the Cloud UI are limited to patches for the most recent major and minor releases. Deprecated versions of Astro Runtime aren't available. To upgrade your Astro Runtime version, you’ll need to update your Docker image. For more information about upgrading Astro Runtime, see [Upgrade Astro Runtime](upgrade-runtime.md).
+    - **Astro Runtime**: By default, the latest version of Astro Runtime is selected. The Astro Runtime versions provided in the Cloud UI are limited to patches for the most recent major and minor releases. Deprecated versions of Astro Runtime aren't available. 
+    
+        To upgrade the Astro Runtime version for your Deployment, you’ll need to update your Docker image in your Astro project directory. For more information about upgrading Astro Runtime, see [Upgrade Astro Runtime](upgrade-runtime.md).
     - **Deployment Location**: The Astro Cluster in which you want to create this Deployment
 
 3. Click **Create Deployment** and give it a few moments to spin up. Within a few seconds, you should see the following:
