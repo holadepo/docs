@@ -34,7 +34,7 @@ For more information, see [CLI Command Reference](cli-reference.md#astro-dev-res
 
 ### New Command to Run DAG Unit Tests with pytest
 
-You can now run custom unit tests for all DAGs in your Astro project with `astro dev pytest`, a new Astro CLI command that uses [pytest](https://docs.pytest.org/en/7.1.x/contents.html#), a common testing framework for Python. As part of this change, new Astro projects created via `astro dev init` now include a `tests` directory, which includes one example pytest built by Astronomer.
+You can now run custom unit tests for all DAGs in your Astro project with `astro dev pytest`, a new Astro CLI command that uses [pytest](https://docs.pytest.org/en/7.1.x/contents.html#), a common testing framework for Python. As part of this change, new Astro projects created via `astro dev init` now include a `tests` directory, which includes one example unit test built by Astronomer.
 
 In addition to running tests locally, you can also run `astro dev pytest` as part of the deploy process to Astronomer Software. For more information, see [CLI Command Reference](cli-reference.md#astro-dev-pytest).
 
