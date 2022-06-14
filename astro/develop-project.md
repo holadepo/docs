@@ -538,7 +538,7 @@ Add the name and, optionally, the version of your packages to `requirements.txt`
 
 :::caution
 
-Ensure that the name of the package on the private repository does not clash with any existing python packages on [PyPI](https://pypi.org). If pip parses multiple repositories with the same name, it can produce unexpected results. 
+Ensure that the name of the package on the private repository does not clash with any existing python packages on [PyPI](https://pypi.org). If pip parses multiple repositories with the same name, it can produce unexpected results.
 
 :::
 
@@ -615,6 +615,19 @@ Ensure that the name of the package on the private repository does not clash wit
    ```
    FROM custom-astro-runtime:5.0.0
    ```
+
+   :::tip
+
+   Astro runtime base images are built on the `linux/amd64` architecture. If
+   your computer is a different architecture (e.g. `linux/arm64` with an Apple
+   M1 processor), you must explicitly specify the architecture of the source
+   image.
+
+   ```
+   FROM --platform=linux/amd64 custom-astro-runtime:5.0.0
+   ```
+
+   :::
 
    Your Astro project can now utilize Python packages from your private PyPi index. To test your DAGs, you can either [run your project locally](develop-project.md#build-and-run-a-project-locally) or [deploy to Astro](deploy-code.md).
 
