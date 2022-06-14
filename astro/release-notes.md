@@ -16,6 +16,14 @@ If you have any questions or a bug to report, don't hesitate to reach out to [As
 
 **Latest CLI Version**: 1.0.1 ([Release notes](cli/release-notes.md))
 
+## June 16, 2022
+
+### Submit Support Requests in the Cloud UI
+
+ Support requests can now be created and submitted in the Cloud UI. You no longer need to register your help desk applications to submit Astronomer support requests. To simplify and speed the submission of support requests, the Support Request form is auto-populated with Workspace and Deployment selections for your organization.
+
+To access the Support Request form in the Cloud UI, click the **Help** icon in the menu bar. 
+
 ## June 9, 2022
 
 ### Update Deployment Configurations with the Astro CLI
