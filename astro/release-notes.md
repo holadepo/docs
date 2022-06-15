@@ -20,7 +20,7 @@ If you have any questions or a bug to report, don't hesitate to reach out to [As
 
 ### Submit Support Requests in the Cloud UI
 
- Support requests can now be created and submitted in the Cloud UI. You no longer need to register your help desk applications to submit Astronomer support requests. To simplify and speed the submission of support requests, the Support Request form is auto-populated with Workspace and Deployment selections for your organization.
+ Support requests can now be created and submitted in the Cloud UI. You no longer need to open an account on the Astronomer support portal to submit a support request. To simplify and speed the submission of support requests, the Support Request form is auto-populated with Workspace and Deployment selections for your organization.
 
 To access the Support Request form in the Cloud UI, click the **Help** icon in the menu bar. 
 
