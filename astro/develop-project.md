@@ -626,3 +626,41 @@ Ensure that the name of the package on the private repository does not clash wit
 
 </TabItem>
 </Tabs>
+
+## Write Data to the `/tmp` Directory
+
+When you need to temporarily save data for testing or other purposes, you can create and save temporary files in the `/tmp` directory. As the name implies, the `/tmp` directory is a temporary location for your data, and files are removed after 10 days. Astronomer recommends that you don't remove files from the `/tmp` directory manually as the directory holds system files and removing them could result in unexpected behavior.
+
+The following sample DAG writes to the `/tmp` directory and then sends the data to the `logging.info` module:
+
+```python
+from datetime import datetime
+
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+import logging
+
+def read_report():
+    keys = ['valid_solutions.csv', 'valid_guesses.csv']
+    hook = S3Hook("aws_east")
+    for key in keys:
+        filename = hook.download_file(key=f"temp/{key}", local_path="/tmp")
+        f = open(filename, 'rb')
+        result = f.read()
+        logging.info(f"{result=}")
+    pass
+
+with DAG(
+    'local_file_sample',
+    default_args={'retries': 1},
+    schedule_interval='@once',
+    start_date=datetime(2022, 2, 1),
+    catchup=False,
+    tags=['example']
+) as dag:
+
+    t0 = PythonOperator(task_id='s3_pull', python_callable=read_report)
+
+    t0
+```
