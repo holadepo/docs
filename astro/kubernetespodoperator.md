@@ -53,8 +53,8 @@ KubernetesPodOperator(
 For each instantiation of the KubernetesPodOperator, you must specify the following values:
 
 - `namespace = conf.get("kubernetes", "NAMESPACE")`: Every Deployment runs on its own Kubernetes namespace within a Cluster. Information about this namespace can be programmatically imported as long as you set this variable.
-- `image`: This is the Docker image that the operator will use to run its defined task, commands, and arguments. The value you specify is assumed to be an image tag that's publicly available on [Docker Hub](https://hub.docker.com/). To pull an image from a private registry, read [Launching Kubernetes Pods into External Clusters](kubernetespodoperator.md#launching-kubernetes-pods-into-external-clusters).
-- `in_cluster=True`: When this value is set, your task will run within the Cluster from which it's instantiated on Astro. This ensures that the Kubernetes Pod running your task has the correct permissions within the Cluster. If you wish to desire to run a Pod externally, check [Pull Images from a Private Registry](kubernetespodoperator.md#run-images-from-a-private-registry).
+- `image`: This is the Docker image that the operator will use to run its defined task, commands, and arguments. The value you specify is assumed to be an image tag that's publicly available on [Docker Hub](https://hub.docker.com/). To pull an image from a private registry, read [Pull Images from a Private Registry](kubernetespodoperator.md#run-images-from-a-private-registry).
+- `in_cluster=True`: When this value is set, your task will run within the Cluster from which it's instantiated on Astro. This ensures that the Kubernetes Pod running your task has the correct permissions within the Cluster. If you wish to desire to run a Pod externally, check [Launching Kubernetes Pods into External Clusters](kubernetespodoperator.md#launching-kubernetes-pods-into-external-clusters)
 - `is_delete_operator_pod=True`: This setting ensures that once a KubernetesPodOperator task is complete, the Kubernetes Pod that ran that task is terminated. This ensures that there are no unused pods in your Cluster taking up resources.
 
 This is the minimum configuration required to run tasks with the KubernetesPodOperator on Astro. To further customize the way your tasks are run, see the topics below.
@@ -126,17 +126,11 @@ From here, you can run images from your private registry by importing `models` f
 from kubernetes.client import models as k8s
 
 KubernetesPodOperator(
-    namespace=namespace,
+    task_id="<task-name>",
     image_pull_secrets=[k8s.V1LocalObjectReference("<your-secret-name>")],
     image="<your-docker-image>",
-    cmds=["<commands-for-image>"],
-    arguments=["<arguments-for-image>"],
-    labels={"<pod-label>": "<label-name>"},
-    name="<pod-name>",
-    is_delete_operator_pod=True,
     in_cluster=True,
-    task_id="<task-name>",
-    get_logs=True,
+    ... 
 )
 ```
 
@@ -144,7 +138,7 @@ KubernetesPodOperator(
 
 If you need to use the `KubernetesPodOperator` to launch a pod into an existing Kubernetes Cluster you will need to use a `kubeconfig` for that other cluster and utilize a related operator like [EKSPodOperator](https://airflow.apache.org/docs/apache-airflow-providers-amazon/2.2.0/operators/eks.html#perform-a-task-on-an-amazon-eks-cluster) or [GKEStartPodOperator](https://registry.astronomer.io/providers/google/modules/gkestartpodoperator), or set a custom `label` on the `KubernetesPodOperator`. You must also set `in_cluster` to `False`.
 
-## External Cluster `kubeconfig`
+## Target Cluster `kubeconfig`
 To set a `kubeconfig` - you can utilize a `kubeconfig` file in your Astonomer project `Dockerfile`, or you can create a [Kubernetes Connection in Airflow](https://airflow.apache.org/docs/apache-airflow-providers-cncf-kubernetes/stable/connections/kubernetes.html#configuring-the-connection). More documentation on retrieving this file or json is available [here](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) and [here](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
 
 ## Required KubernetesPodOperator Configuration
@@ -155,7 +149,7 @@ The following must be set
 - `in_cluster` must be `False`
 - The `namespace` must be the namespace you will deploy to in the other cluster
 - `cluster_context` must be set to the context in the `kubeconfig`
-- You must have network access to the external Kubernetes API server from Astronomer Cloud, and authorization to create and delete pods from the context within your `kubeconfig`
+- You must have network access to the target Kubernetes API server from Astronomer Cloud, and authorization to create and delete pods from the context within your `kubeconfig`
 - All other standard configuration must also be set 
   - `image` will need to be set and must be accessible from the other
     cluster
@@ -163,11 +157,12 @@ The following must be set
 
 ```python
 KubernetesPodOperator(
-    task_id="example_kpo_task",
+    task_id="<task-name>",
     labels={"kubernetes_pod_operator": "external-cluster"},
     in_cluster=False,
-    namespace="my_namespace",
-    cluster_context="my_context",
+    namespace="<target-cluster-namespace>",
+    cluster_context="<cluster-context>",
+    image="<your-docker-image>",
     ...
 )
 ```
