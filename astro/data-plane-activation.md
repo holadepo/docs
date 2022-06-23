@@ -27,7 +27,7 @@ This model allows us to get you started quickly, providing cloud-grade reliabili
 
 By default, the Astronomer account has no access to your data services. We’ll guide you through how to make these connections securely, whether peering VPCs or making direct connections.
 
-If you want to test an existing Airflow project on Astro, ensure that the project has been upgraded to Airflow 2.
+To test an existing Airflow project on Astro, your Airflow code needs to be compatible with Airflow 2. For a complete guide on how to migrate an open source Airflow project running 1.10.15 or lower to Astro, see [Upgrade to Airflow 2.0+](upgrade-to-airflow-2.md).
 
 ### Pre-Flight Checklist
 
