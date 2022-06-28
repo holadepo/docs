@@ -13,7 +13,7 @@ import {siteVariables} from '@site/src/versions';
 
 This guide provides instructions for how to install the Astro CLI.
 
-The Astro CLI is the easiest way to run Apache Airflow on your machine. From the Astro CLI, you can run a local Apache Airflow environment with a dedicated Webserver, Scheduler and Postgres Database. Once you create an Astronomer Software project, you can customize it (for example, add Python or OS-level packages or add plugins) and test it on your local machine.
+The  is the easiest way to run Apache Airflow on your machine. From the Astro CLI, you can run a local Apache Airflow environment with a dedicated Webserver, Scheduler and Postgres Database. Once you create an Astronomer Software project, you can customize it (for example, add Python or OS-level packages or add plugins) and test it on your local machine.
 
 You can also use the CLI to:
 
@@ -152,3 +152,29 @@ If the installation was successful, you should see the following output:
 
 <pre><code parentName="pre">{`% astro version
 Astro CLI Version: ${siteVariables.cliVersion}`}</code></pre>
+
+## Access a different base domain
+
+Every cluster is assigned a base domain. If your organization has multiple clusters, you can run Astro CLI commands to quickly move from one base domain to another. This can be useful when you're authenticated on one cluster, but you need to perform tasks on another cluster.
+
+You can authenticate to multiple domains from a single base domain. You run the `astro login x` command to authenticate to a base domain, and then run the `astro context switch x` command to define the default base domain on your computer. 
+
+1. In the Astro CLI, run the following command to re-authenticate to the target base domain:
+
+    ```
+    astro login
+    ```
+2. Run the following command to define the default base domain on your computer:
+
+    ```
+    astro context switch <basedomain>
+    ```
+
+3. Run the following command to view a list of base domains for all Astronomer installations that you can access and to confirm your default base domain:
+
+    ```
+    astro context list
+    ```
+## Related documentation
+
+- [Astro CLI Reference Guide](cli-reference.md)
