@@ -26,12 +26,12 @@ Integrate your Datadog instance with Astronomer Software to view Airflow metrics
     openmetrics.yaml: |-
       instances:
         # The airflow statsd endpoint to query from
-        - prometheus_url: http://<airflow-release-name>-statsd.<airflow-release-namespace>.svc:9102/metrics
-          namespace: "<airflow-release-namespace>"
+        - prometheus_url: http://<first-deployment-release-name>-statsd.<platform-namespace>.svc:9102/metrics
+          namespace: "<platform-namespace>"
           metrics:
             - "*"
-        - prometheus_url: http://<airflow-release-name>-statsd.<airflow-release-namespace>.svc:9102/metrics
-          namespace: "<airflow-release-namespace>"
+        - prometheus_url: http://<second-deployment-release-name>-statsd.<platform-namespace>.svc:9102/metrics
+          namespace: "<platform-namespace>"
           metrics:  
             - "*"
     ```
