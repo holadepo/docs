@@ -48,6 +48,6 @@ Integrate an Astronomer Software Deployment with your Datadog account to view Ai
     kubectl get pods -n datadog
     ```
     ```bash
-    kubectl exec -it dd-test-datadog-f4vhx -n astronomer -- bash -c 'agent status' Defaulting container name to agent.
+    kubectl exec -it <dd-test-datadog pod name> -n astronomer -- bash -c 'agent status' Defaulting container name to agent.
     ```
 6. Open your Datadog **Metrics Summary** dashboard and confirm that Airflow metrics are displayed.
