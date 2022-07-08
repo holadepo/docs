@@ -73,6 +73,7 @@ module.exports = {
         label: 'Platform setup',
         items: [
         'integrate-auth-system',
+        'integrate-datadog',
         'logs-to-s3',
         'registry-backend',
         'renew-tls-cert',
