@@ -7,7 +7,7 @@ description: Integrate your Datadog instance with Astronomer Software.
 Integrate your Datadog instance with Astronomer Software to view Airflow metrics in Datadog. These metrics can include running DAG processes, task data, pool data, and executor data. To view a complete list of the Airflow metrics collected by the Datadog Agent, see [Data Collected](https://docs.datadoghq.com/integrations/airflow/?tabs=host#data-collected). 
 
 1. Install the Datadog Agent on your Kubernetes cluster. See [Install the Datadog Agent on Kubernetes](https://docs.datadoghq.com/containers/kubernetes/installation/?tabs=operator).
-2. Open the `values.yaml` file and add this entry:
+2. Open the [Datadog `values.yaml` configuration file](https://github.com/DataDog/helm-charts/blob/main/charts/datadog/values.yaml) and add a new configuration under `datadog.confd.openmetrics.instances` for each Deployment you want to integrate with Datadog:
     ```yaml
     datadog:  
       confd:
