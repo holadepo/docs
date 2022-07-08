@@ -40,8 +40,11 @@ Integrate your Datadog account with Astronomer Software to view Airflow metrics 
     ```shell
     helm upgrade datadog -f datadog-values.yaml --set datadog.site='datadoghq.com' --set datadog.apiKey=<my-api-key> datadog/datadog -n datadog
     ```
-5. Optional: Confirming your configuration changes were implemented. First find the Datadog agent pod using `kubectl get pods -n datadog`, and then use the run the following command:
+5. Optional: Run the following commands to identify the Datadog Agent pod and then confirm your configuration changes were implemented:
 
+    ```bash
+    kubectl get pods -n datadog
+    ```
     ```bash
     kubectl exec -it dd-test-datadog-f4vhx -n astronomer -- bash -c 'agent status' Defaulting container name to agent.
     ```
