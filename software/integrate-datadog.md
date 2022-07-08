@@ -19,6 +19,8 @@ Integrate your Datadog account with Astronomer Software to view Airflow metrics 
               metrics:
                 - "*"
     ```
+    You can find the Deployment release name in Astronomer Software by selecting a Deployment and then copying the value displayed in the **Release Name** field.   
+
 3. Optional. Add additional entries for your other Airflow instances. For example:
     ```yaml
     datadog:  
@@ -34,9 +36,7 @@ Integrate your Datadog account with Astronomer Software to view Airflow metrics 
           namespace: "<platform-namespace>"
           metrics:  
             - "*"
-    ```
-    You can find the Deployment release name in Astronomer Software by selecting a Deployment and then copying the value displayed in the **Release Name** field.   
-  
+    ``` 
 4. Save your changes to the `values.yaml` file and then run the following command to update your Datadog configuration:
 
     ```shell
