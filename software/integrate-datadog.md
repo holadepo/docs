@@ -51,8 +51,6 @@ Integrate an Astronomer Software Deployment with your Datadog account to view Ai
     kubectl exec -it <dd-test-datadog pod name> -n astronomer -- bash -c 'agent status' Defaulting container name to agent.
     ```
 
-    The openmetrics section of the output will list all the endpoints you have configured.
+    The openmetrics section of the output lists all your configured endpoints.
 
-    :::
-
-5. Open your Datadog **Metrics Summary** dashboard and confirm that Airflow metrics are displayed.
+6. Open your Datadog **Metrics Summary** dashboard and confirm that Airflow metrics are displayed.
