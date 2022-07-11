@@ -36,27 +36,19 @@ Integrate an Astronomer Software Deployment with your Datadog account to view Ai
           namespace: "<platform-namespace>"
           metrics:  
             - "*"
-    ```
+    ``` 
 4. Save your changes to the `values.yaml` file and then run the following command to update your Datadog configuration:
 
     ```shell
     helm upgrade datadog -f datadog-values.yaml --set datadog.site='datadoghq.com' --set datadog.apiKey=<my-api-key> datadog/datadog -n datadog
     ```
-
-    :::tip
-
-    The changes can be validated with the following optional commands:
-
-    Run the following command to identify the Datadog Agent pod:
+5. Optional. Run the following commands to identify the Datadog Agent pod and then confirm your configuration changes were implemented:
 
     ```bash
     kubectl get pods -n datadog
     ```
-
-    Confirm your configuration changes were implemented with the following command:
-
     ```bash
-    kubectl exec -it <datadog pod name> -n astronomer -- bash -c 'agent status'
+    kubectl exec -it <dd-test-datadog pod name> -n astronomer -- bash -c 'agent status' Defaulting container name to agent.
     ```
 
     The openmetrics section of the output will list all the endpoints you have configured.
