@@ -72,6 +72,7 @@ To automate code deploys to a Deployment using [GitHub Actions](https://github.c
 
    - `ASTRONOMER_KEY_ID` = `<your-key-id>`
    - `ASTRONOMER_KEY_SECRET` = `<your-key-secret>`
+   - `DEPLOYMENT_ID` = `<your-deployment-id>`
 
 2. In your project repository, create a new YAML file in `.github/workflows` that includes the following configuration:
 
@@ -87,6 +88,7 @@ To automate code deploys to a Deployment using [GitHub Actions](https://github.c
       ## Sets Deployment API key credentials as environment variables
       ASTRONOMER_KEY_ID: ${{ secrets.ASTRONOMER_KEY_ID }}
       ASTRONOMER_KEY_SECRET: ${{ secrets.ASTRONOMER_KEY_SECRET }}
+      DEPLOYMENT_ID: ${{ secrets.DEPLOYMENT_ID }}
 
     jobs:
       build:
@@ -118,8 +120,10 @@ This setup assumes the following prerequisites:
 
    - `PROD_ASTRONOMER_KEY_ID` = `<your-prod-key-id>`
    - `PROD_ASTRONOMER_KEY_SECRET` = `<your-prod-key-secret>`
+   - `PROD_DEPLOYMENT_ID` = `<your-prod-deployment-id>`
    - `DEV_ASTRONOMER_KEY_ID` = `<your-dev-key-id>`
    - `DEV_ASTRONOMER_KEY_SECRET` = `<your-dev-key-secret>`
+   - `DEV_DEPLOYMENT_ID` = `<your-dev-deployment-id>`
 
 2. In your project repository, create a new YAML file in `.github/workflows` that includes the following configuration:
 
@@ -141,6 +145,7 @@ This setup assumes the following prerequisites:
           ## Sets DEV Deployment API key credentials as environment variables
           ASTRONOMER_KEY_ID: ${{ secrets.DEV_ASTRONOMER_KEY_ID }}
           ASTRONOMER_KEY_SECRET: ${{ secrets.DEV_ASTRONOMER_KEY_SECRET }}
+          DEPLOYMENT_ID: ${{ secrets.DEV_DEPLOYMENT_ID }}
         runs-on: ubuntu-latest
         steps:
         - name: checkout repo
@@ -155,6 +160,7 @@ This setup assumes the following prerequisites:
           ## Sets PROD Deployment API key credentials as environment variables
           ASTRONOMER_KEY_ID: ${{ secrets.PROD_ASTRONOMER_KEY_ID }}
           ASTRONOMER_KEY_SECRET: ${{ secrets.PROD_ASTRONOMER_KEY_SECRET }}
+          DEPLOYMENT_ID: ${{ secrets.PROD_DEPLOYMENT_ID }}
         runs-on: ubuntu-latest
         steps:
         - name: checkout repo
@@ -183,6 +189,7 @@ To complete this setup, you need:
 
   - `ASTRONOMER_KEY_ID` = `<your-key-id>`
   - `ASTRONOMER_KEY_SECRET` = `<your-key-secret>`
+  - `DEPLOYMENT_ID` = `<your-deployment-id>`
 
 2. In your project repository, create a new YAML file in `.github/workflows` that includes the following configuration:
 
@@ -198,8 +205,9 @@ To complete this setup, you need:
       build:
         runs-on: ubuntu-latest
         env:
-          ASTRONOMER_KEY_ID: ${{ secrets.ASTRO_ACCESS_KEY_ID_DEV }}
-          ASTRONOMER_KEY_SECRET: ${{ secrets.ASTRO_SECRET_ACCESS_KEY_DEV }}
+          ASTRONOMER_KEY_ID: ${{ secrets.ASTRONOMER_KEY_ID }}
+          ASTRONOMER_KEY_SECRET: ${{ secrets.ASTRONOMER_KEY_SECRET }}
+          DEPLOYMENT_ID: ${{ secrets.DEPLOYMENT_ID }}
         steps:
         - name: Check out the repo
           uses: actions/checkout@v2
@@ -237,8 +245,9 @@ To complete this setup, you need:
       build:
         runs-on: ubuntu-latest
         env:
-          ASTRONOMER_KEY_ID: ${{ secrets.ASTRO_ACCESS_KEY_ID_DEV }}
-          ASTRONOMER_KEY_SECRET: ${{ secrets.ASTRO_SECRET_ACCESS_KEY_DEV }}
+          ASTRONOMER_KEY_ID: ${{ secrets.ASTRONOMER_KEY_ID }}
+          ASTRONOMER_KEY_SECRET: ${{ secrets.ASTRONOMER_KEY_SECRET }}
+          DEPLOYMENT_ID: ${{ secrets.DEPLOYMENT_ID }}
         steps:
         - name: Check out the repo
           uses: actions/checkout@v2
@@ -461,6 +470,7 @@ This pipeline configuration requires:
 
     - `ASTRONOMER_KEY_ID` = `<your-key-id>`
     - `ASTRONOMER_KEY_SECRET` = `<your-key-secret>`
+    - `DEPLOYMENT_ID` = `<your-deploymenet-id>`
 
 2. In your Drone server, open your Astro project repository and go to **Settings** > **General**. Under **Project Settings**, turn on the **Trusted** setting.
 
@@ -500,6 +510,8 @@ This pipeline configuration requires:
             from_secret: ASTRONOMER_KEY_ID
           ASTRONOMER_KEY_SECRET:
             from_secret: ASTRONOMER_KEY_SECRET
+          DEPLOYMENT_ID:
+            from_secret: DEPLOYMENT_ID
 
     services:
     - name: docker
@@ -536,6 +548,7 @@ To automate code deploys to a Deployment using [GitLab](https://gitlab.com/), co
 
     - `ASTRONOMER_KEY_ID` = `<your-key-id>`
     - `ASTRONOMER_KEY_SECRET` = `<your-key-secret>`
+    - `DEPLOYMENT_ID` = `<your-deploymenet-id>`
 
 2. Go to the Editor option in your project's CI/CD section and commit the following:
 
@@ -548,6 +561,7 @@ To automate code deploys to a Deployment using [GitLab](https://gitlab.com/), co
       variables:
          ASTRONOMER_KEY_ID: $ASTRONOMER_KEY_ID
          ASTRONOMER_KEY_SECRET: $ASTRONOMER_KEY_SECRET
+         DEPLOYMENT_ID: $DEPLOYMENT_ID
       before_script:
        - apk add --update curl && rm -rf /var/cache/apk/*
        - apk add bash
@@ -568,8 +582,10 @@ To automate code deploys to Astro across multiple environments using [GitLab](ht
 
     - `DEV_ASTRONOMER_KEY_ID` = `<your-dev-key-id>`
     - `DEV_ASTRONOMER_KEY_SECRET` = `<your-dev-key-secret>`
+    - `DEV_DEPLOYMENT_ID` = `<your-dev-deployment-id>`
     - `PROD_ASTRONOMER_KEY_ID` = `<your-prod-key-id>`
     - `PROD_ASTRONOMER_KEY_SECRET` = `<your-prod-key-secret>`
+    - `PROD_DEPLOYMENT_ID` = `<your-prod-deployment-id>`
 
 :::caution
 
@@ -588,6 +604,7 @@ When you create environment variables that will be used in multiple branches, yo
         variables:
             ASTRONOMER_KEY_ID: $DEV_ASTRONOMER_KEY_ID
             ASTRONOMER_KEY_SECRET: $DEV_ASTRONOMER_KEY_SECRET
+            DEPLOYMENT_ID: $DEV_DEPLOYMENT_ID
         before_script:
           - apk add --update curl && rm -rf /var/cache/apk/*
           - apk add bash
@@ -605,6 +622,7 @@ When you create environment variables that will be used in multiple branches, yo
         variables:
             ASTRONOMER_KEY_ID: $PROD_ASTRONOMER_KEY_ID
             ASTRONOMER_KEY_SECRET: $PROD_ASTRONOMER_KEY_SECRET
+            DEPLOYMENT_ID: $PROD_DEPLOYMENT_ID
         before_script:
           - apk add --update curl && rm -rf /var/cache/apk/*
           - apk add bash
