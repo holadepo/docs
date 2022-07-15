@@ -18,6 +18,7 @@ module.exports = {
       type: 'category',
       label: 'Get started',
       items: [
+      'log-in-to-software',
       'install-cli',
       'create-project',
       ],
@@ -141,6 +142,15 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Astro Runtime',
+      items: [
+      'runtime-image-architecture',
+      'migrate-to-runtime',
+      'runtime-version-lifecycle-policy',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Troubleshoot',
       items: [
       'kubectl',
@@ -154,6 +164,7 @@ module.exports = {
     items: [
       'release-notes',
       'cli-release-notes',
+      'runtime-release-notes',
     ],
     },
     {
@@ -164,7 +175,6 @@ module.exports = {
       'support',
       'cli-reference',
       'version-compatibility-reference',
-      'runtime-image-architecture',
       'release-lifecycle-policy',
       'documentation-archive',
       ],
