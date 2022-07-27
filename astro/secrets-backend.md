@@ -757,6 +757,7 @@ To automate code deploys to a Deployment using [GitHub Actions](https://github.c
         curl -sSL install.astronomer.io | sudo bash -s
         astro deploy --image-name ${{ steps.image_tag.outputs.image_tag }}
     ```
+    
 </TabItem>
 
 </Tabs>
