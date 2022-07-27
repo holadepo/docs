@@ -31,19 +31,19 @@ Secrets backend integrations are configured individually with each Astro Deploym
 
 :::info
 
-If you enable a secrets backend on Astro, you can continue to define Airflow variables and connections either [as environment variables](environment-variables.md#add-airflow-connections-and-variables-via-environment-variables) or in the Airflow UI as needed. If set via the Airflow UI, variables and connections are stored as encrypted values in Airflow's metadata database.
+If you enable a secrets backend on Astro, you can continue to define Airflow variables and connections either [as environment variables](environment-variables.md#add-airflow-connections-and-variables-via-environment-variables) or in the Airflow UI as needed. If set with the Airflow UI, variables and connections are stored as encrypted values in Airflow's metadata database.
 
 When Airflow checks for the value of an Airflow variable or connection, it does so in the following order of precedence:
 
-1. Secrets backend
-2. Environment variable
-3. Set via the Airflow UI
+- Secrets backend
+- Environment variable
+- Set with the Airflow UI
 
 :::
 
 :::tip
 
-Setting Airflow connections via secrets requires knowledge of how to generate Airflow connection URIs. If you plan to store Airflow connections on your secrets backend, read the [Apache Airflow documentation](https://airflow.apache.org/docs/apache-airflow/stable/howto/connection.html#connection-uri-format) for guidance on how to generate a connection URI.
+Setting Airflow connections with secrets requires knowledge of how to generate Airflow connection URIs. If you plan to store Airflow connections on your secrets backend, read the [Apache Airflow documentation](https://airflow.apache.org/docs/apache-airflow/stable/howto/connection.html#connection-uri-format) for guidance on how to generate a connection URI.
 
 :::
 
@@ -57,6 +57,7 @@ Setting Airflow connections via secrets requires knowledge of how to generate Ai
         {label: 'AWS Secrets Manager', value: 'secretsmanager'},
         {label: 'Google Cloud Secret Manager', value: 'gcp'},
         {label: 'Azure Key Vault', value: 'azure'},
+        {label: 'Doppler', value: 'doppler'},
     ]}>
 <TabItem value="hashicorp">
 
@@ -79,14 +80,14 @@ To use this feature, you need:
 - [The Vault CLI](https://www.vaultproject.io/docs/install).
 - Your Vault Server's URL. If you're using a local server, this should be `http://127.0.0.1:8200/`.
 
-If you do not already have a Vault server deployed but would like to test this feature, we recommend that you either:
+If you do not already have a Vault server deployed but would like to test this feature, Astronomer recommends that you:
 
 - Sign up for a Vault trial on [Hashicorp Cloud Platform (HCP)](https://cloud.hashicorp.com/products/vault) or
-- Deploy a local Vault server via the instructions in [our Airflow Guide](https://www.astronomer.io/guides/airflow-and-hashicorp-vault).
+- Deploy a local Vault server using the instructions in the [Airflow Guide](https://www.astronomer.io/guides/airflow-and-hashicorp-vault).
 
 #### Step 1: Create a Policy and AppRole in Vault
 
-To use Vault as a secrets backend, we recommend configuring a Vault AppRole with a policy that grants only the minimum necessary permissions for Astro. To do this:
+To use Vault as a secrets backend, Astronomer recommends configuring a Vault AppRole with a policy that grants only the minimum necessary permissions for Astro. To do this:
 
 1. [Create a Vault policy](https://www.vaultproject.io/docs/concepts/policies) with the following permissions:
 
@@ -155,14 +156,14 @@ This tells Airflow to look for variable and connection information at the `secre
 
 :::warning
 
-If you want to deploy your project to a hosted Git repository before deploying to Astro, be sure to save `<your-approle-id>` and `<your-approle-secret>` securely. We recommend adding them to your project's [`.env` file](develop-project.md#set-environment-variables-via-env-local-development-only) and specifying this file in `.gitignore`.
+If you want to deploy your project to a hosted Git repository before deploying to Astro, be sure to save `<your-approle-id>` and `<your-approle-secret>` securely. Astronomer recommends adding them to your project's [`.env` file](develop-project.md#set-environment-variables-via-env-local-development-only) and specifying this file in `.gitignore`.
 
-When you deploy to Astro in Step 4, you can set these values as secrets via the Cloud UI.
+When you deploy to Astro in Step 4, you can set these values as secrets with the Cloud UI.
 
 :::
 
 :::info
-By default, Airflow uses `"kv_engine_version": 2`, but we've written this secret using v1. You can change this to accommodate how you write and read your secrets.
+By default, Airflow uses `"kv_engine_version": 2`, but this secret was written using v1. You can change this to accommodate how you write and read your secrets.
 :::
 
 For more information on the Airflow provider for Hashicorp Vault and how to further customize your integration, read the [Apache Airflow documentation](https://airflow.apache.org/docs/apache-airflow-providers-hashicorp/stable/_api/airflow/providers/hashicorp/hooks/vault/index.html).
@@ -226,7 +227,7 @@ Now, any Airflow variable or connection that you write to your Vault server can 
 
 <TabItem value="paramstore">
 
-In this section, we'll walk through how to use [AWS Systems Manager (SSM) Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) as a secrets backend on Astro.
+This section, provides instructions for using the [AWS Systems Manager (SSM) Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) as a secrets backend on Astro.
 
 #### Prerequisites
 
@@ -240,7 +241,7 @@ To use this feature, you need:
 
 #### Step 1: Write an Airflow variable or connection to AWS Parameter Store
 
-To start, add an Airflow variable or connection as a secret to Parameter Store for testing. You will use this secret to test your backend's functionality in Step 3, so it can be either a real or placeholder value. For instructions, read AWS documentation on how to do so via the [AWS Systems Manager Console](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-create-console.html), the [AWS CLI](https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-cli.html), or [Tools for Windows PowerShell](https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-ps.html).
+To start, add an Airflow variable or connection as a secret to Parameter Store for testing. You will use this secret to test your backend's functionality in Step 3, so it can be either a real or placeholder value. For instructions, read AWS documentation on how to do so with the [AWS Systems Manager Console](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-create-console.html), the [AWS CLI](https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-cli.html), or [Tools for Windows PowerShell](https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-ps.html).
 
 Variables and connections should live at `/airflow/variables` and `/airflow/connections`, respectively. For example, if you're setting a secret variable with the key `my_secret`, it should exist at `/airflow/connections/my_secret`.
 
@@ -269,7 +270,7 @@ In the next step, you'll test that this configuration is valid locally.
 
 :::warning
 
-If you want to deploy your project to a hosted Git repository before deploying to Astro, be sure to save `<your-aws-key>` and `<your-aws-secret-key>` in a secure manner. When you deploy to Astro, you should set these values as secrets via the Cloud UI.
+If you want to deploy your project to a hosted Git repository before deploying to Astro, be sure to save `<your-aws-key>` and `<your-aws-secret-key>` in a secure manner. When you deploy to Astro, you should set these values as secrets with the Cloud UI.
 
 :::
 
@@ -387,7 +388,7 @@ ENV AIRFLOW__SECRETS__BACKEND_KWARGS='{"connections_prefix": "/airflow/connectio
 
 :::warning
 
-If you want to deploy your project to a hosted Git repository before deploying to Astro, be sure to save `<your-aws-access-key-id>` and `<your-aws-secret-access-key>` securely. We recommend adding it to your project's [`.env` file](develop-project.md#set-environment-variables-via-env-local-development-only) and specifying this file in `.gitignore`. When you deploy to Astro, you should set these values as secrets via the Cloud UI.
+If you want to deploy your project to a hosted Git repository before deploying to Astro, be sure to save `<your-aws-access-key-id>` and `<your-aws-secret-access-key>` securely. Astronomer recommends adding it to your project's [`.env` file](develop-project.md#set-environment-variables-via-env-local-development-only) and specifying this file in `.gitignore`. When you deploy to Astro, you should set these values as secrets with the Cloud UI.
 
 :::
 
@@ -466,7 +467,7 @@ To use Google Cloud Secret Manager as your Airflow secrets backend, you need:
 
 #### Step 1: Write an Airflow variable or connection to Google Cloud Secret Manager
 
-To start, add an Airflow variable or connection as a secret to Google Cloud Secret Manager. You can do so via the Cloud Console or the gcloud CLI. You will use this secret to test your backend's functionality in Step 3, so it can be either a real or placeholder value.
+To start, add an Airflow variable or connection as a secret to Google Cloud Secret Manager. You can do so with the Cloud Console or the gcloud CLI. You will use this secret to test your backend's functionality in Step 3, so it can be either a real or placeholder value.
 
 Secrets must be formatted such that:
 - Airflow variables are set as `airflow-variables-<variable-key>`.
@@ -502,7 +503,7 @@ Make sure to paste your entire JSON service account key in place of `<your-key-f
 
 :::warning
 
-If you want to deploy your project to a hosted Git repository before deploying to Astro, be sure to save `<your-key-file>` securely. We recommend adding it to your project's [`.env` file](develop-project.md#set-environment-variables-via-env-local-development-only) and specifying this file in `.gitignore`. When you deploy to Astro, you should set these values as secrets via the Cloud UI.
+If you want to deploy your project to a hosted Git repository before deploying to Astro, be sure to save `<your-key-file>` securely. Astronomer recommends adding it to your project's [`.env` file](develop-project.md#set-environment-variables-via-env-local-development-only) and specifying this file in `.gitignore`. When you deploy to Astro, you should set these values as secrets with the Cloud UI.
 
 :::
 
@@ -618,7 +619,7 @@ By default, this setup requires that you prefix any secret names in Key Vault wi
 
 :::warning
 
-If you want to deploy your project to a hosted Git repository before deploying to Astro, be sure to save `<your-client-id>`, `<your-tenant-id>`, and `<your-client-secret>`  in a secure manner. When you deploy to Astro, you should set these values as secrets via the Cloud UI.
+If you want to deploy your project to a hosted Git repository before deploying to Astro, be sure to save `<your-client-id>`, `<your-tenant-id>`, and `<your-client-secret>`  in a secure manner. When you deploy to Astro, you should set these values as secrets with the Cloud UI.
 
 :::
 
@@ -679,6 +680,83 @@ Once you've confirmed that your secrets are being imported correctly to your loc
 
 From here, you can store any Airflow variables or connections as secrets on Key Vault and use them in your project.
 
+</TabItem>
+
+<TabItem value="doppler">
+
+This topic provides steps for how to use [Doppler](https://www.doppler.com/) as a secrets backend for both local development and on Astro. To do this, you will:
+
+- Update your Dockerfile.
+- Set up the GitHub repository.
+
+#### Prerequisites
+
+To use this feature, you need:
+
+- A [Deployment](create-deployment.md) on Astro.
+- [The Astro CLI](cli/get-started.md).
+- An [Astro project](create-project.md).
+- A [Doppler account](https://dashboard.doppler.com/register).
+- A [Doppler Service Token](https://docs.doppler.com/docs/service-tokens).
+- A [Doppler secret](https://docs.doppler.com/docs/secrets).
+
+#### Step 1: Update your Dockerfile 
+
+1. In your Astro project, open your `Dockerfile`.
+2. Add the following instruction to your `Dockerfile`:
+
+    ```dockerfile
+    ARG DOPPLER_TOKEN
+    ENV DOPPLER_TOKEN=${DOPPLER_TOKEN}
+
+    USER root
+    # Install Doppler CLI
+    RUN apt-get update && apt-get install -y apt-transport-https ca-certificates curl gnupg && \
+        curl -sLf --retry 3 --tlsv1.2 --proto "=https" 'https://packages.doppler.com/public/cli/gpg.DE2A7741A397C129.key' | apt-key add - && \
+        echo "deb https://packages.doppler.com/public/cli/deb/debian any-version main" | tee /etc/apt/sources.list.d/doppler-cli.list && \
+        apt-get update && \
+        apt-get -y install doppler
+
+    USER astro
+
+    ENTRYPOINT ["/entrypoint", "doppler", "run", "--"]
+    CMD ["airflow", "--help"]
+    ```
+Only the last `ENTRYPOINT` instruction in the Dockerfile is run and it overrides the `ENTRYPOINT` defined in the Base Image.  
+
+3. Save the changes to your `Dockerfile`.
+
+#### Step 2: Set up the GitHub repository
+
+To automate code deploys to a Deployment using [GitHub Actions](https://github.com/features/actions), complete the following setup in a Git-based repository that hosts an Astro project:
+
+1. Set the following as [GitHub secrets](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository):
+
+   - `ASTRONOMER_KEY_ID` = `<your-key-id>`
+   - `ASTRONOMER_KEY_SECRET` = `<your-key-secret>`
+
+2. In your project repository, create a new YAML file in `.github/workflows` that includes the following configuration:
+
+    ```yaml
+    - name: Checkout our Repo.
+      uses: actions/checkout@v2.3.4
+    - name: Create image tag
+      id: image_tag
+      run: echo ::set-output name=image_tag::astro-$(date +%Y%m%d%H%M%S)
+    - name: Build image
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        file: Dockerfile
+        tags: ${{ steps.image_tag.outputs.image_tag }}
+        load: true
+        build-args: |
+          DOPPLER_TOKEN=${{ secrets.DOPPLER_TOKEN }}
+    - name: Deploying the image to Astro.
+      run: |
+        curl -sSL install.astronomer.io | sudo bash -s
+        astro deploy --image-name ${{ steps.image_tag.outputs.image_tag }}
+    ```
 </TabItem>
 
 </Tabs>
