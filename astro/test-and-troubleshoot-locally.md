@@ -185,7 +185,7 @@ By design, workers on the Astro data plane include very limited ephemeral storag
 
 To create or store files from Airflow, Astronomer recommends creating an Airflow connection to an external storage service such as Amazon S3 and using it in place of local file storage. For more guidance on storing data in Airflow, see Astronomer's guide on [passing data between Airflow tasks](https://www.astronomer.io/guides/airflow-passing-data-between-tasks/).
 
-If you are having trouble implementing an alternative storage system for Airflow, contact [Astronomer support](https://support.astronomer.io/) and describe your use case.
+If you experience trouble implementing an alternative storage system for Airflow, contact [Astronomer support](https://support.astronomer.io/) and describe your use case.
 
 ### Port allocation issues
 
