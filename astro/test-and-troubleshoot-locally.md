@@ -157,7 +157,7 @@ If you see this error, increase the CPU and memory allocated to Docker. If you'r
 
 If you're running the Astro CLI on a Mac computer that's built with the Apple M1 chip, your Astro project might take more than 5 mins to start after running `astro dev start`. This is a current limitation of Astro Runtime and the Astro CLI.
 
-If your project won't load, it might also be because your webserver or scheduler is unhealthy. In this case, you might need to debug your containers. 
+If your project won't load, it might also be because your webserver or scheduler is unhealthy. In this case, you might need to debug your containers.
 
 1. After running `astro dev start`, retrieve a list of running containers by running `astro dev ps`.
 2. If the webserver and scheduler containers exist but are unhealthy, check their logs by running:
@@ -179,6 +179,14 @@ These logs should help you understand why your webserver or scheduler is unhealt
 - Misconfigured Dockerfile or Docker override file.
 - Misconfigured Airflow settings.
 
+### Astro/ Airflow runs out of local storage for files
+
+By design, workers on the Astro data plane include very limited ephemeral storage for Airflow tasks. Both Astronomer and the [Apache Airflow documentation](https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html#communication) do not recommend creating or storing files in Airflow's local file system, as there's no guarantee that the storage will be sufficient for your tasks and persist between worker Pods.
+
+To create or store files from Airflow, Astronomer recommends creating an Airflow connection to an external storage service such as Amazon S3 and using it in place of local file storage. For more guidance on storing data in Airflow, see Astronomer's guide on [passing data between Airflow tasks](https://www.astronomer.io/guides/airflow-passing-data-between-tasks/).
+
+If you are having trouble implementing an alternative storage system for Airflow, contact [Astronomer support](https://support.astronomer.io/) and describe your use case.
+
 ### Port allocation issues
 
 By default, the Astro CLI uses port `8080` for the Airflow webserver and port `5432` for the Airflow metadata database in a local Airflow environment. If these ports are already in use on your local computer, an error message similar to the following appears:
@@ -196,7 +204,7 @@ To resolve a port availability error, you have the following options:
 1. Run `docker ps` to identify the Docker containers running on your computer.
 2. Copy the values in the `CONTAINER ID` column.
 3. Select one of the following options:
-    
+
     - Run `docker stop <container_id>` to stop a specific Docker container. Replace `<container_id>` with one of the values you copied in step 2.
     - Run `docker stop $(docker ps -q)` to stop all running Docker containers.
 
