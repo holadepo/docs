@@ -1,18 +1,17 @@
 ---
 title: "Deploy Kedro Pipelines to Apache Airflow"
-sidebar_label: "Deploy Kedro Pipelines to Apache Airflow"
+sidebar_label: "Kedro"
 description: "Use the kedro-airflow plugin to change your Kedro pipelines into Apache Airflow DAGs and deploy them to a production environment."
 id: airflow-kedro
-tags: ["Plugins", "Integrations"]
 ---
 
 [Kedro](https://github.com/quantumblacklabs/kedro) is an open-source Python framework for creating reproducible, maintainable, and modular data science code. It borrows concepts from software engineering and applies them to machine learning code.
 
 While Kedro is an excellent option for data engineers and data scientists looking to author their data pipelines and projects with software engineering practices, it can extend even further to integrate with [Apache Airflow](https://airflow.apache.org) for distributed scheduling and execution of the resultant pipelines.
 
-## The plugin
+## Airflow Kedro plugin
 
-In close partnership with the team at Kedro, Astronomer recently extended the [`kedro-airflow`](https://github.com/quantumblacklabs/kedro-airflow) plugin to accommodate a significantly improved developer experience. With this plugin, you can translate your Kedro pipeline into a clean, legible, and well-structured Apache Airflow DAG with one simple command:
+In close partnership with the team at Kedro, Astronomer extended the [`kedro-airflow`](https://github.com/quantumblacklabs/kedro-airflow) plugin to accommodate a significantly improved developer experience. With this plugin, you can translate your Kedro pipeline into a clean, legible, and well-structured Apache Airflow DAG with one simple command:
 
 ```bash
 kedro airflow create
@@ -22,16 +21,14 @@ This makes for a clean experience for anyone looking to deploy their Kedro pipel
 
 ### Prerequisites
 
-To use the plugin, you'll need the following running on your machine or a fresh virtual environment:
-
-- [The Astro CLI](https://docs.astronomer.io/astro/install-cli)
-- [Kedro](https://github.com/quantumblacklabs/kedro)
-- [The `kedro-airflow` Plugin](https://github.com/quantumblacklabs/kedro-airflow)
-- [Docker](https://docs.docker.com/docker-for-mac/install/)
+- [The Astro CLI](https://docs.astronomer.io/astro/install-cli).
+- [Kedro](https://github.com/quantumblacklabs/kedro).
+- [The `kedro-airflow` Plugin](https://github.com/quantumblacklabs/kedro-airflow).
+- [Docker](https://docs.docker.com/docker-for-mac/install/).
 
 ## Try it out
 
-Astronomer added some functionality to the plugin that makes for a great integration with Astro. To give it a try, you'll use the `astro-airflow-iris` starter that's included in the Kedro project. You'll spin up a fresh Kedro project and run your pipelines as DAGs in a local Airflow environment.
+To try out Astronomer's integration with Airflow, use the `astro-airflow-iris` starter project that includes some simple Kedro pipelines. You'll generate a starter Kedro project, convert your pipelines to Airflow DAGs, and run these DAGs in a local Airflow environment.
 
 ### Create an Astro-Kedro project
 
@@ -40,7 +37,7 @@ Astronomer added some functionality to the plugin that makes for a great integra
 3. Run `kedro install`.
 4. Run `kedro package`.
    
-### Prepare and run the project in Astro
+### Prepare and run the project using the Astro CLI
 
 1. Run `cp src/dist/*.whl ./`.
 2. Run `kedro catalog create --pipeline=__default__`.
@@ -67,8 +64,7 @@ Astronomer added some functionality to the plugin that makes for a great integra
         filepath: data/07_model_output/example_predictions.pkl`
     ```
 
-4. Make sure you have the `kedro-airflow` plugin installed, then run `pip install kedro-airflow`.
+4. Make sure you have the `kedro-airflow` plugin installed using `pip install kedro-airflow`.
 5. Run `kedro airflow create -t dags/`.
 6. Make sure you have the Astro CLI installed and have Docker running on your machine, then run `astro dev start` to fire up a local Airflow instance and visualize your DAGs.
 
-Astronomer is proud to partner with Kedro to bring this plugin experience into the world and look forward to extending it to improve the developer experience even more. [Get in touch](https://astronomer.io/contact) if you'd like to talk to us about how you use Kedro and Airflow together!
