@@ -114,6 +114,10 @@ By default, Astronomer support activates the **Enable DNS Name** option on suppo
 
 You'll incur additional AWS infrastructure costs for every AWS PrivateLink endpoint service that you use.  See [AWS PrivateLink pricing](https://aws.amazon.com/privatelink/pricing/). 
 
+## AWS Private Service Connect
+
+Use AWS Private Service Connect to create private connections from Astro to your AWS services without exposing your data to the public internet. 
+
 ## AWS IAM roles
 
 To grant an Astro cluster access to a service that is running in an AWS account not managed by Astronomer, use AWS IAM roles. IAM roles on AWS are often used to manage the level of access a specific user, object, or group of users has to a resource. This includes an Amazon S3 bucket, Redshift instance, or secrets backend.
