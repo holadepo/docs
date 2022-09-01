@@ -1,4 +1,4 @@
----
+-----
 title: 'View logs'
 sidebar_label: 'View logs'
 id: view-logs
@@ -6,16 +6,6 @@ description: View logs for your data pipelines both locally and on Astro.
 ---
 
 View Airflow task and component logs to troubleshoot your data pipelines and better understand the behavior of your tasks and their execution environment.
-
-:::info
-
-Astro has early access support for forwarding Airflow task logs and basic Airflow metrics to [Datadog](https://www.datadoghq.com/). To enable log forwarding, [submit a request to Astronomer Support](astro-support.md).
-
-In your request, make sure to provide your Datadog API key and identify on which Astro cluster(s) you want to enable the integration.
-
-If you're interested in forwarding task logs to other third-party logging tools, contact Astronomer Support.
-
-:::
 
 ## View Airflow task logs
 
