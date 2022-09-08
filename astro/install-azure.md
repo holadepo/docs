@@ -28,22 +28,22 @@ For more information about managing Azure subscriptions with the Azure CLI, see 
 
     These role assignments are required for cluster creation, and can be removed after the cluster is created.
 - Microsoft Azure CLI or Azure Az PowerShell module.  See [How to install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) and [Install the Azure Az PowerShell module](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps).
-- A minimum quota of 48 Standard Ddv5-series vCPUs in the deployment region. You can use Dv5-series vCPUs, but you'll need 96 total vCPUs composed of 48 Ddv5-series vCPUs and 48 Dv5-series vCPUs. To adjust your quota limits up or down, see [Increase VM-family vCPU quotas](https://docs.microsoft.com/en-us/azure/azure-portal/supportability/per-vm-quota-requests).
+- A minimum quota of 48 Standard Ddv5-series vCPUs in each availability zone in your deployment region. You can use Dv5-series vCPUs, but you'll need 96 total vCPUs composed of 48 Ddv5-series vCPUs and 48 Dv5-series vCPUs. To adjust your quota limits up or down, see [Increase VM-family vCPU quotas](https://docs.microsoft.com/en-us/azure/azure-portal/supportability/per-vm-quota-requests).
 - A subscription to the [Astro Status Page](https://status.astronomer.io). This ensures that you're alerted when an incident occurs or when scheduled maintenance is planned.
 
 For more information about the resources required to run Astro on Azure, see [Azure Resource Reference](resource-reference-azure.md).
 
-### VPC peering prerequisites (Optional)
+### VNet peering prerequisites (Optional)
 
 If any Azure resources are on a private network, you can choose one of the following options:
 
 - Use the public internet and allow-lists for communication.
-- Create a VPC Peering connection between the Astronomer VPC and your network VPCs.
+- Create a VNet peering connection between Astronomer and your network VNets.
 
 To implement the second option, you'll additionally need:
 
-- A CIDR block (RFC 1918 IP Space) no smaller than a `/19` range. You must ensure it does not overlap with the AWS VPC(s) that you will be peering with later. The default CIDR range is `172.20.0.0/19`.
-- VPC Name / ID for peering with Astronomer.
+- A CIDR block (RFC 1918 IP Space) no smaller than a `/19` range. You must ensure it does not overlap with the VNets that you will be peering with later. The default CIDR range is `172.20.0.0/19`.
+- VNet name / ID for peering with Astronomer.
 - The IP addresses of your DNS servers.
 
 ## Step 1: Access Astro
