@@ -147,6 +147,8 @@ To avoid extended service disruptions, Astronomer recommends upgrading Astronome
 
 ### Upgrading to 0.30
 
+ > **Note:** In order to upgrade to 0.30, You should be at least on astronomer version 0.29.0. Please do not upgrade to 0.30 directly.
+
 #### Running the 0.30 upgrade script with --no-hook
 
 Using the `--no-hook` flag in [Step 7](#step-7-run-astronomers-upgrade-script) results in the upgrade script skipping a necessary database migration job. Because of this, you should not specify this flag when running the upgrade script.
