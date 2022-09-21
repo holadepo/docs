@@ -11,18 +11,16 @@ import TabItem from '@theme/TabItem';
 
 This is where you'll find instructions for completing the Astro installation process, including prerequisites and the steps required for our team to provision resources in your network.
 
-At a high-level, we'll ask that you come prepared with a new AWS account. From there, you can expect to:
+To install Astro on AWS, you'll complete the following tasks:
 - Create an account on Astro.
 - Share AWS account information with our team.
 - Create a cross-account IAM role that Astro can assume within your new AWS account.
 
-Astronomer will then create a cluster within your AWS account that hosts the resources and Apache Airflow components necessary to deploy DAGs and execute tasks. If you'd like to support more than 1 Astro cluster, [contact Astronomer support](https://cloud.astronomer.io/support).
+Astronomer will then create a cluster within your AWS account that hosts the resources and Apache Airflow components necessary to deploy DAGs and execute tasks. If you'd like to support more than 1 Astro cluster, contact [Astronomer support](https://cloud.astronomer.io/support).
 
 For a complete list of the AWS resources that our team will provision in your AWS account, see [Resource usage](resource-reference-aws.md).
 
 ## Prerequisites
-
-Before completing this setup, make sure that you have:
 
 - A dedicated AWS account with minimum EC2 service quotas.
 - An AWS IAM user with the following permissions:
@@ -37,6 +35,7 @@ Before completing this setup, make sure that you have:
 
    See [Creating an administrator IAM user and user group (console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html#getting-started_create-admin-group-console).
 - A subscription to the [Astro Status Page](https://status.astronomer.io/). This will ensure that you're alerted in the case of an incident or scheduled maintenance.
+- The `https://cloud.astronomer.io/`, `https://astro-<your-org>.datakin.com/`, and `https://<your-org>.astronomer.run/` domains added to your organization's allowlist. 
 
 Astro requires a clean AWS account with a minimum set of EC2 service quotas. For security reasons, the install process is not currently supported on an AWS account that has other tooling running in it. For instructions on creating a new AWS account, follow [AWS documentation](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/).
 
@@ -81,7 +80,7 @@ If you're the first person from your team to authenticate, the Astronomer team w
 
 :::tip
 
-After completing your initial installation, we recommend [setting up an identity provider (IdP)](configure-idp.md) so that users can log in to Astro through your IdP.
+After completing your initial installation, Astronomer recommends [setting up an identity provider (IdP)](configure-idp.md) so that users can log in to Astro through your IdP.
 
 :::
 
