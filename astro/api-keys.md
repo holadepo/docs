@@ -22,6 +22,8 @@ When using Deployment API keys, keep in mind the following:
 
 ## Create an API key
 
+To create an API key for a Deployment:
+
 1. In the Cloud UI, open your Deployment.
 2. In the **API keys** menu, click **Add API Key**:
 
