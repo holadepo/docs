@@ -228,6 +228,7 @@ module.exports = {
       'cli/astro-dev-run',
       'cli/astro-dev-start',
       'cli/astro-dev-stop',
+      'cli/astro-dev-upgrade-check',
       'cli/astro-dev-restart',
       'cli/astro-login',
       'cli/astro-logout',
