@@ -9,7 +9,7 @@ Run the [Airflow 2 upgrade check script](https://airflow.apache.org/docs/apache-
 
 ## Usage
 
-Use this command only if the DAGs in your Astro project were imported from another open source or commercial Airflow project on version 1.14-1.15. The command is compatible with all supported versions of [Astro Runtime](runtime-image-architecture.md).
+Use this command only if the DAGs in your Astro project are imported from another open source or commercial Airflow project on version 1.14-1.15.
 
 After starting your project with [`astro dev start`](cli/astro-dev-start.md), run:
 
