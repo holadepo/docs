@@ -71,3 +71,25 @@ Astro also supports exporting Airflow metrics to Datadog. See [Export Airflow me
 1. Create a new Datadog API key or copy an existing API key. See [API and Application Keys](https://docs.datadoghq.com/account_management/api-app-keys/).
 2. Identify the Astro cluster from which you want to forward task logs.
 3. Submit a request to [Astronomer support](https://cloud.astronomer.io/support) with your Datadog API key, the name of your Astro cluster, and the [Datadog Site](https://docs.datadoghq.com/getting_started/site/) where you want the logs forwarded.
+
+## Astro audit logs
+
+Astro audit logs record Astro control plane administrative activities and events. You can use the audit logs to determine who did what, where, and when. You can also use audit logs as a monitoring system to make sure your organization is meeting its security and regulatory requirements.
+
+### Retrieve and export audit logs
+
+ Audit logs are retained for 90 days. Organization Owner permissions are required to extract and export audit log events. 
+
+ 1. In the Cloud UI, click the **Settings** tab.
+
+ 2. Select the number days of audit data to export and then click **Export**.
+
+    The extracted audit log data is saved as a JSON file in your `downloads` directory with the default filename `<astro-organization-name>-logs-<number-of-days>-days-<date>.json`.
+
+### Available audit log data
+
+Audit log data is collated in the following categories:
+
+- API events
+- Airflow UI access
+- Astronomer container registry access
