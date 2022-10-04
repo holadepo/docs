@@ -191,7 +191,7 @@ This view can help you get a better sense of the scope of your lineage integrati
 
 Use the **Datasets** page to view a table of recent datasets that your DAGs have read or written to. This information can help you quickly identify dataset dependencies and data pipeline access requirements.
 
-![Datasets page](/img/release-notes/lineage-datasets.png)
+![Datasets page](/img/docs/lineage-datasets.png)
 
 Each row in the table includes:
 
