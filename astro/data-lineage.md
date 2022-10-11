@@ -9,13 +9,13 @@ The **Lineage** tab in the Cloud UI can help you troubleshoot issues with your d
 
 From the **Lineage** tab on Astro, you can access the following four pages:
 
-- **Runs**: A real-time overview of all **runs** that emit data lineage across your Organization. A run can be an Airflow task run or any other process configured to emit lineage data to Astronomer, such as a Spark job.
+- **Runs**: A real-time overview of all runs that emit data lineage across your Organization. A run can be an Airflow task run or any other process configured to emit lineage data to Astronomer, such as a Spark job.
 - **Datasets**: A real-time overview of all recent **datasets** that your DAGs have read or written to.
 - **Issues**: A view of potential issues or statistical inconsistencies related to your runs or datasets.
 - **Lineage**: A graph view that visualizes data lineage.
 - **Integrations**: A view of your current data lineage integrations.
 
-You can use these pages to diagnose issues that may be difficult to troubleshoot in other environments. For example, if an Airflow task failed because a database schema changed, you can use the **Lineage** page on Astro to determine which run caused the change and which downstream tasks failed as a result.
+You can use these pages to diagnose issues that may be difficult to troubleshoot in other environments. For example, if an Airflow task failed because a database schema changed, you can use the **Lineage** page of the Cloud UI to determine which run caused the change and which downstream tasks failed as a result.
 
 For more information on data lineage and related concepts, see [Data lineage concepts](data-lineage-concepts.md).
 
@@ -66,7 +66,7 @@ In the **Lineage** page, Astronomer renders your data pipeline as a directed gra
 
 Directed vertices connect runs to datasets and datasets to runs. Two runs or two datasets can't be connected by a single vertex.
 
-In the following example, `etl_menus` is a run that exists as part of the `etl_orders` group in the `food_delivery` namespace. A blue vertex connects `etl_menus` to the `public.menus` dataset, and dots moving towards the dataset indicate that `insert` interacted with data in this dataset. The moving dots along the blue line continue into the `etl` group, which contains more runs and datasets. To see exactly where this data will flow in the `etl` group, you can expand the group using the blue arrow next to the left of its name.
+In the following example, `etl_menus` is a run that exists as part of the `etl_orders` group in the `food_delivery` namespace. A blue vertex connects `etl_menus` to the `public.menus` dataset, and dots moving towards the dataset indicate that `insert` interacted with data in this dataset. The moving dots along the blue line continue into the `etl` group, which contains more runs and datasets. To see exactly where this data will flow in the `etl` group, you can expand the group using the blue arrow to the left of its name.
 
 ![Lineage graph example showing different nodes and vertices](/img/docs/lineage-overview.png)
 
@@ -152,18 +152,18 @@ The **Compare** view shows a list of past instances for a given run. Using this 
 
 3. Select any two runs to open the comparison view for your graph. In this view:
 
-    - Runs and datasets that experienced a code change between the time of your selected runs noted with an organe icon.
-    - The run whose instances you're comparing is highlighted in orange and labeled as **Comparing Task**.
+    - An orange icon identifies runs and datasets that experienced a code change between the time of your selected runs.
+    - The run whose instances you're comparing is highlighted in orange and labeled **Comparing Task**.
     - Any part of the data pipeline that is affected by the code change is highlighted with orange vertices. 
-    - When you click on a run or a datset which experienced a code change during the comparison period, the bottom table highlights the code change.
+    - When you click a run or a dataset which experienced a code change during the comparison period, the code change is highlighted in the bottom table.
   
 4. Select a run or dataset that experienced a code change.
    
 5. Click the **Info** tab. Instead of showing a single code source, this tab now shows code differences during your comparison period. Use this information to determine what code change might have caused downstream errors.
 
-In the following example, two instances of the run `analytics.delivery_times_7_days` are being compared over a period of time. During this period, the dataset `public.delivery_7_days` experienced a code change. Because this dataset is upstream of the compared run, it's marked with an orange notification and has an orange vertex connecting it to the run.
+In the following example, two instances of the run `analytics.delivery_times_7_days` are being compared over time. During this period, the dataset `public.delivery_7_days` experienced a code change. Because this dataset is upstream of the compared run, it's marked with an orange notification and has an orange vertex connecting it to the run.
 
-After clicking on the dataset, the metrics window shows the message **CHANGES BETWEEN COMPARED RUNS** and a notification appears on the **Info** tab. After clicking on the **Info** tab, the UI shows that the `discount_id` filed was changed from an `INTEGER` to a `VARCHAR` type.
+After clicking the dataset, the metrics window shows the message **CHANGES BETWEEN COMPARED RUNS** and a notification appears on the **Info** tab. After clicking the **Info** tab, the UI shows that the `discount_id` filed was changed from an `INTEGER` to a `VARCHAR` type.
 
     ![Info tab when comparing two code sources](/img/docs/lineage-compare-example.png)
 
@@ -175,13 +175,13 @@ The **Issues** page contains metrics that can help you identify data pipeline be
 
 The **Issues** page identifies the following issues:
 
-- **Job Execution Issues**: A job execution issue occurs when a run emits an error that it did not successfully complete. This metric is only available for Deployments using Runtime 5.0.0+.
+- **Job Execution Issues**: A job execution issue occurs when a run emits an error that it did not successfully complete. This metric is only available for Deployments using Runtime 5.0.0 and later.
 - **Job Duration Issues**: A job duration issue occurs when a run's duration differs by more than three standard deviations from the average run time for that specific run.
 - **Data Quality Issues**: If you integrate with [Great Expectations](https://www.astronomer.io/guides/airflow-great-expectations/), an open source data quality tool, this metric will track issues generated by expectation quality checks for datasets. Use this tab to detect data quality failures that could indicate an upstream problem.
 
 ## View a summary of past runs
 
-By default, the **Lineage** page shows the last lineage graph you accessed. To view metrics about all of your runs and access lineage graphs, click **Runs** on the left sidebar. This page is structured similarly to the Airflow UI calendar view. It provides a list of your most recent runs, as well as a calendar that shows all runs over the last year.
+By default, the **Lineage** page shows the last lineage graph you accessed. To view metrics about all of your runs and access lineage graphs, click **Runs** on the left sidebar. This page is structured similarly to the Airflow UI calendar view. It provides a list of your most recent runs, as well as a calendar that shows all runs for the last year.
 
 ![Lineage summary page](/img/docs/lineage-explore.png)
 

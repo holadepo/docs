@@ -5,7 +5,7 @@ id: data-lineage-concepts
 description: Learn about data lineage and how you can use it in Airflow.
 ---
 
-[Data lineage](https://en.wikipedia.org/wiki/Data_lineage) is the concept of tracking and observing data flowing through a data pipeline. You can use data lineage to understand data sources, troubleshoot run failures, manage PII, and ensure compliance with data regulations.
+[Data lineage](https://en.wikipedia.org/wiki/Data_lineage) is the concept of tracking and observing data flowing through a data pipeline. You can use data lineage to understand data sources, troubleshoot run failures, manage  personally identifiable information (PII), and ensure compliance with data regulations.
 
 ## Lineage on Astronomer
 
@@ -28,7 +28,7 @@ The following terms are used frequently when discussing data lineage and OpenLin
 
 Using OpenLineage with Airflow gives you insight into your complex data ecosystems and can lead to better data governance. Airflow is a natural place to integrate data lineage because it touches and moves data across many parts of an Organization.
 
-The following are the primary capabilities that OpenLineage with Airflow provides:
+The following are the insights that OpenLineage with Airflow provides:
 
 - Quickly locate the cause of task failures by identifying issues in upstream datasets. For example, you might see that a task failed because an upstream run outside of Airflow failed to populate a particular dataset.
 - Easily see the affected area of any run failures or changes to data by visualizing the relationship between runs and datasets.
