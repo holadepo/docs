@@ -117,15 +117,15 @@ The following table maps some common `operationName` attributes to their corresp
 | ------- | ---------------------------------------------------- | --------------------------------- |
 | A new user is invited to an organization.   | `createUserInvite` | `inviteeEmail`, `role` |
 | A user is deleted from an organization.  | `deleteUserInvite` | `inviteId` |
-| A user is assigned a new role.  | `assignUserOrganizationRole` | `role` `userId` |
-| A user is removed from an organization.  | `deleteOrganizationUser` | `organizationId` `userId` |
+| A user is assigned a new role.  | `assignUserOrganizationRole` | `role`, `userId` |
+| A user is removed from an organization.  | `deleteOrganizationUser` | `organizationId`, `userId` |
 | A Workspace is created.  | `workspaceCreate` | `label` `organizationId` |
 | A Workspace is deleted.  | `workspaceDelete` | `id` |
-| A user is added to a Workspace, or a user role is updated. | `assignUserWorkspaceRole` | `email` `role` `workspaceId` |
-| A user is removed from a workspace. | `deleteUserWorkspaceRole` | `userId` `workspaceId` |
-| A new Deployment is created. | `createDeployment` | `label` `organizationId` |
+| A user is added to a Workspace, or a user role is updated. | `assignUserWorkspaceRole` | `email`, `role`, `workspaceId` |
+| A user is removed from a workspace. | `deleteUserWorkspaceRole` | `userId`, `workspaceId` |
+| A new Deployment is created. | `createDeployment` | `label`, `organizationId` |
 | A Deployment is updated. | `updateDeployment` | `deploymentSpec` |
-| An API key is created for a Deployment. | `createDeploymentApiKey` | `deploymentId` `role` |
+| An API key is created for a Deployment. | `createDeploymentApiKey` | `deploymentId`, `role` |
 | The code for a Deployment is updated. | `ImageCreate` | `deploymentId` |
 
 Use your analytics or audit tool to view additional attribute mapping information. 
