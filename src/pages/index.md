@@ -1,5 +1,5 @@
 ---
-title: 'Astronomer Docs'
+title: 'Astronomer Documentation'
 id: home
 slug: /
 description: 'Learn everything you need to know about Astro and Apache Airflow™'
