@@ -31,7 +31,7 @@ To use the KubernetesPodOperator you need to install the Kubernetes provider pac
 pip install apache-airflow-providers-cncf-kubernetes==<version>
 ```
 
-If you use the [Astro CLI](https://docs.astronomer.io/astro/cli/overview), you can alternatively install the package by adding the following line to your Astro project:
+If you use the [Astro CLI](https://docs.astronomer.io/astro/cli), you can alternatively install the package by adding the following line to your Astro project:
 
 ```text
 apache-airflow-providers-cncf-kubernetes==<version>
