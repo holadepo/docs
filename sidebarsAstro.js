@@ -89,11 +89,13 @@ module.exports = {
           link: {
             type:'generated-index',
             title: 'Install Astro',
-            description: 'Install Astro in the Astronomer dataplane or your existing cloud instance.'
+            description: 'Install Astro on the Astronomer-hosted cloud or your existing cloud instance.'
           },
           items: [
             'hosted-dataplane',
-            'bring-your-own',
+            'install-aws',
+            'install-azure',
+            'install-gcp',
           ],
         },
         'manage-workspaces',
