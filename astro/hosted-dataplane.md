@@ -5,7 +5,7 @@ id: hosted-dataplane
 description: Get started with Astro on the Astronomer-hosted cloud.
 ---
 
-This is where you'll find instructions for completing the Astro installation process on the Astronomer data plane, including the prerequisites and accessing Astro.
+This is where you'll find instructions for completing the Astro installation process on the Astronomer-hosted cloud.
 
 Creating Astro clusters on the Astronomer cloud eliminates the need for Astronomer to have privileged access to your organization's cloud. When hosting your cloud data, Astronomer adheres to industry best practices and standards including the Health Insurance Portability and Accountability Act (HIIPAA), Service Organization Control 2 (SOC2), and  General Data Protection Regulation (GDPR). 
 
@@ -21,7 +21,7 @@ The setup process assumes that you've already provided Astronomer support with t
 
 If you haven't provided this information to Astronomer support, contact your Astronomer representative. 
 
-## Step 1: Let Astronomer complete the install
+## Step 1: Astronomer support creates the cluster
 
 Astronomer support creates your first cluster on the Astronomer cloud after you've provided your setup information.
 
@@ -29,19 +29,18 @@ This process can take some time. Wait for confirmation that the installation is 
 
 ## Step 2: Access Astro
 
-Go to https://cloud.astronomer.io/ and create an account.
+1. Go to https://cloud.astronomer.io/ and create an Astronomer account.
 
-When you first authenticate to Astro, you can sign in to the Cloud UI with a Google account, a GitHub account, or an email and password.
+2. Go to `https://cloud.astronomer.io`, enter your email address, and then click **Continue**.
 
-![Astro login screen](/img/docs/login.png)
+3. Select one of the following options to access the Cloud UI:
 
-If you're the first person from your Organization to authenticate, Astronomer support adds you as a Workspace Admin to a new Workspace named after your Organization. From there, you'll be able to add other team members to that Workspace without the assistance of Astronomer support.
+    - Enter your password and click **Continue**.
+    - To authenticate with an identity provider (IdP), click **Continue with SSO**, enter your username and password, and then click **Sign In**.
+    - To authenticate with your GitHub account, click **Continue with GitHub**, enter your username or email address, enter your password, and then click **Sign in**.
+    - To authenticate with your Google account, click **Continue with Google**, choose an account, enter your username and password, and then click **Sign In**.
 
-:::tip
-
-After completing your initial installation, Astronomer recommends [setting up an identity provider (IdP)](configure-idp.md) so that users can log in to Astro through your IdP.
-
-:::
+    If you're the first person in an Organization to authenticate, you're added as a Workspace Admin to a new Workspace named after your Organization. You can add other team members to the Workspace without the assistance of Astronomer support. See [Add a user](add-user.md). To integrate an identity provider (IdP) with Astro, see [Set up an identity provider](configure-idp.md).
 
 ## Step 3: Create a Deployment
 
