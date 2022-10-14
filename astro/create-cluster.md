@@ -25,7 +25,7 @@ To create an Astro cluster on your existing AWS, Microsoft Azure, or Google Clou
 - Permissions to configure IAM in the dedicated account for Astro on your cloud.
 
 <Tabs
-    defaultValue="Hosted cloud"
+    defaultValue="hosted cloud"
     groupId= "prerequisites"
     values={[
         {label: 'Hosted cloud', value: 'hosted cloud'},
