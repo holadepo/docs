@@ -169,7 +169,6 @@ module.exports = {
           ],
         },
         'platform-variables',
-        'data-plane-activation',
         {
           type: 'category',
           label: 'Data lineage',
