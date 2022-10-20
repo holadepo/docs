@@ -13,10 +13,10 @@ Creating Astro clusters on the Astronomer cloud eliminates the need for Astronom
 
 The setup process assumes that you've already provided Astronomer support with the following information: 
 
-- Your preferred cloud provider. The supported options are: Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).
-- Your preferred cluster installation region. See the supported region lists for [AWS](resource-reference-aws.md#aws-region), [Azure](resource-reference-azure.md#supported-regions), and [GCP](resource-reference-gcp.md#gcp-region).
-- Optional. Your preferred worker instance type for your first cluster. See [AWS cluster configurations](resource-reference-aws.md#worker-node-types), [Azure cluster configurations](resource-reference-azure#worker-node-pools), and [GCP cluster configurations](resource-reference-gcp.md#worker-node-pools).
-- Optional. Your VPC peering requirements for [AWS](install-aws#vpc-peering-prerequisites-optional) and [GCP](install-gcp#vpc-peering-prerequisites-optional), or your VNet peering requirements for [Azure](install-azure#vnet-peering-prerequisites-optional).
+- Your preferred cloud provider. The supported options are: Amazon Web Services (AWS) and Google Cloud Platform (GCP).
+- Your preferred cluster installation region. See the supported region lists for [AWS](resource-reference-aws.md#aws-region) and [GCP](resource-reference-gcp.md#gcp-region).
+- Optional. Your preferred worker instance type for your first cluster. See [AWS cluster configurations](resource-reference-aws.md#worker-node-types) and [GCP cluster configurations](resource-reference-gcp.md#worker-node-pools).
+- Optional. Your VPC peering requirements for [AWS](install-aws#vpc-peering-prerequisites-optional) and [GCP](install-gcp#vpc-peering-prerequisites-optional).
 - The email address of your first Astro user.
 
 If you haven't provided this information to Astronomer support, contact your Astronomer representative. 
