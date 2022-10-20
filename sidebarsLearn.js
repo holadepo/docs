@@ -6,7 +6,7 @@ module.exports = {
       label: 'Concepts',
       link: {
         type:'generated-index',
-        title: 'Concepts',
+        title: 'Airflow concepts',
         description: 'Learn about the fundamentals of Apache Airflow.'
       },
       items: [
@@ -34,10 +34,10 @@ module.exports = {
         },
         {
           type: 'category',
-          label: 'Pipelines',
+          label: 'DAGs',
           link: {
             type: 'generated-index',
-            title: 'Pipelines',
+            title: 'DAGs',
             description: 'Learn about how to construct and manage data pipelines to be reliable and performant.',
           },
           items: [
@@ -45,6 +45,7 @@ module.exports = {
             'airflow-passing-data-between-tasks',
             'airflow-branch-operator',
             'airflow-importing-custom-hooks-operators',
+            'astro-python-sdk-etl',
             'debugging-dags',
             'subdags',
             'task-groups',
